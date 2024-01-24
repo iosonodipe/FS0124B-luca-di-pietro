@@ -30,7 +30,7 @@ h1{
 
 img{
     display: block;
-    width: 14vh;
+    max-width: 12rem;
     margin-left: auto;
     margin-right: auto;
 }
