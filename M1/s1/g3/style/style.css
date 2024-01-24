@@ -39,7 +39,7 @@ header p{
     text-align: center;
     padding: 10px;
     background-color: #fdfaef;
-    border-top: 1px solid #ffe7b7;
+    border-top: 2px solid #ffe7b7;
     font-size: 0.9rem;
     color: #375c5a;
 }
@@ -56,7 +56,7 @@ video{
 }
 
 aside{
-    border-left: 1px solid #ffe7b7;
+    border-left: 2px solid #ffe7b7;
     padding-left: 1rem;
     margin-top: 2rem;
     margin-bottom: 3rem
