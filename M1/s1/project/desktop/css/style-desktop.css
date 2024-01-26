@@ -40,13 +40,13 @@ body{
 /* header */
 
 header{
-    text-align: center;
+    text-align: left;
     background-color: black;
-    padding: 2rem 0;
+    padding: 2rem 4rem;
 }
 
 header img{
-    width: 35%;
+    width: 200px;
 }
 
 /* main */
