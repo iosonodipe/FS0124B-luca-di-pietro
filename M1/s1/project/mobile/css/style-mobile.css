@@ -25,30 +25,76 @@ Bordo schede: #dee1e3
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
     color: #393d41;
     font-size: 1.2rem;
     line-height: 1.65;
+    text-align: center;
 }
 
 /* header */
 
+header{
+    text-align: center;
+    background-color: black;
+    padding: 2rem 0;
+}
+
+header img{
+    width: 35%;
+}
 
 /* main */
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Montserrat', sans-serif;
     color: #25a2c3;
-    line-height: 1.5;
+    line-height: 1;
 }
+
+h1{
+    font-size: 2rem;
+}
+
+
+#container{
+}
+
+#main-title{
+    background-image: url(../images/banner.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size: 100%;
+    padding: 2.3rem 1rem 2.3rem 1rem;
+}
+
+#main-title p{
+    margin: 1rem 0 2.5rem 0;
+}
+
+#main-title a{
+    background-color: #f04c2f;
+    border-radius: 0.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 2rem;
+}
+
+.margin-section{
+    margin: 4rem 1rem;
+}
+
+#vantaggi
 
 /* aside */
 
 /* footer */
 
-footer{
-    color: #c8e7f0;
-}
 
 
