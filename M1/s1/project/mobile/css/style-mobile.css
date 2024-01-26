@@ -99,6 +99,11 @@ h1{
     margin-bottom: 2.5rem;
 }
 
+.margin-section a{
+    text-decoration: none;
+    color: #393d41;
+}
+
 #vantaggi img{
     width: 75%;
     border-radius: 50%;
@@ -113,20 +118,58 @@ h1{
 .bgcolor-section h2{
     color: white;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-.bgcolor-section .orange{
+#orange{
     background-color: #e22d0e;
+}
+
+#p-italic{
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+#p-ceo{
+    font-size: 0.8rem;
+}
+
+/* aside */
+
+.card{
+    border: 1px solid #dee1e3;
+    border-radius: 0.3rem;
+    margin-bottom: 2.5rem;
 }
 
 .card img{
     margin-bottom: 1rem;
 }
 
-
-/* aside */
+.card-text{
+    padding: 0 1rem;
+}
 
 /* footer */
 
+footer{
+    color: #c8e7f0;
+    background-color: #25a2c3;
+    padding-bottom: 3rem;
+}
+
+footer a{
+    color: #c8e7f0;
+}
+
+footer p{
+    color: #c8e7f0;
+}
+
+footer hr{
+    border: 1px solid #c8e7f0;
+    margin: 2rem 6rem;
+}
 
 
