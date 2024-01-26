@@ -19,6 +19,8 @@ Bordi
 Bordo schede: #dee1e3
 */
 
+/* generale */
+
 *{
     box-sizing: border-box;
 }
@@ -30,8 +32,23 @@ body{
     line-height: 1.65;
 }
 
+/* header */
+
+
+/* main */
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Montserrat', sans-serif;
     color: #25a2c3;
     line-height: 1.5;
 }
+
+/* aside */
+
+/* footer */
+
+footer{
+    color: #c8e7f0;
+}
+
+
