@@ -100,8 +100,23 @@ h1{
     color: #393d41;
 }
 
-#vantaggi img{
-    width: 75%;
+#vantaggi-section{
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+}
+
+#img-vantaggi{
+    width: 50%;
+}
+
+#vantaggi{
+    text-align: left;
+    width: 50%;
+}
+
+#img-vantaggi > img{
+    display: inline-block;
     border-radius: 50%;
     margin-bottom: 2.5rem;
 }
@@ -133,17 +148,20 @@ h1{
 
 /* aside */
 
+#correlati-section{
+    display: flex;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
 .card{
     border: 1px solid #dee1e3;
     border-radius: 0.3rem;
     margin-bottom: 2.5rem;
+    margin: 2rem 1rem;
 }
 
-.card img{
-    margin-bottom: 1rem;
-}
-
-.card-text{
+.card-text{ 
     padding: 0 1rem;
 }
 
@@ -165,7 +183,7 @@ footer p{
 
 footer hr{
     border: 1px solid #c8e7f0;
-    margin: 2rem 6rem;
+    margin: 2rem 40%;
 }
 
 
