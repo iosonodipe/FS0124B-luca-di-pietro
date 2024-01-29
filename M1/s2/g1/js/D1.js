@@ -21,21 +21,21 @@ REGOLE
  Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
 
-const myName= 'Luca';
+const myName = "Luca";
 console.log(myName);
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
 
-let somma=12+20;
+let somma = 12 + 20;
 console.log(somma);
 
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
 
-let x= 12;
+let x = 12;
 console.log(x);
 
 /* ESERCIZIO 5
@@ -50,7 +50,7 @@ console.log(x);
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 
-let sottrazione= 4-x;
+let sottrazione = 4 - x;
 console.log(sottrazione);
 
 /* ESERCIZIO 7
@@ -59,9 +59,9 @@ console.log(sottrazione);
  EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).
 */
 
-let name1= 'john';
-let name2= 'John';
-console.log(name1==name2);
+let name1 = "john";
+let name2 = "John";
+console.log(name1 == name2);
 // false perchè la prima lettera di entrambi è differente (case sensitive)
-console.log(name1.toLowerCase==name2.toLowerCase);
+console.log(name1.toLowerCase == name2.toLowerCase);
 // true perchè la funzione toLowerCase rende tutto la stringa minuscola
