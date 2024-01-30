@@ -81,12 +81,29 @@ Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno
 }
 
 /* ESERCIZIO 5
-  Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
-  C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
-  Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
+Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
+C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
+Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 5");
+
+  let totalShoppingCart = 51;
+  let spedizione = 10;
+
+  if (totalShoppingCart > 0 && totalShoppingCart <= 50) {
+    totalShoppingCart += spedizione;
+    console.log("Il totale del tuo ordine è pari a", totalShoppingCart);
+  } else if (totalShoppingCart > 50) {
+    console.log(
+      "Spedizione gratuita! Il tuo ordine supera i 50 euro, il totale è pari a",
+      totalShoppingCart
+    );
+  } else {
+    console.log("Il carrello è vuoto");
+  }
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
