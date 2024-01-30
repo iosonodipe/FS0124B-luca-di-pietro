@@ -218,8 +218,17 @@ me.skills.pop([2]);
 console.log(me.skills);
 
 /* ESERCIZIO 14
-  Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
+Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
+
+{
+console.log('ESERCIZIO 14');
+
+let array=[]
+console.log(array);
+array.push([1,2,3,4,5,6,7,8,9,10])
+console.log([1,2,3,4,5,6,7,8,9,10]);
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
