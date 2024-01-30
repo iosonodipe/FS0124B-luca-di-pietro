@@ -116,13 +116,13 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
   let totalShoppingCart = 62;
   let spedizione = 10;
 
-  if ((totalShoppingCart * 0.8) > 0 && (totalShoppingCart * 0.8) <= 50) {
-    totalShoppingCart = (totalShoppingCart*0.8)+spedizione;
+  if (totalShoppingCart * 0.8 > 0 && totalShoppingCart * 0.8 <= 50) {
+    totalShoppingCart = totalShoppingCart * 0.8 + spedizione;
     console.log("Il totale del tuo ordine è pari a", totalShoppingCart);
-  } else if ((totalShoppingCart * 0.8) > 50) {
+  } else if (totalShoppingCart * 0.8 > 50) {
     console.log(
       "Spedizione gratuita! Il tuo ordine supera i 50 euro, il totale è pari a",
-      totalShoppingCart*0.8
+      totalShoppingCart * 0.8
     );
   } else {
     console.log("Il carrello è vuoto");
@@ -133,15 +133,31 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
-*/
+  */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 7");
+
+  let num1 = 5;
+  let num2 = 4;
+  let num3 = 6;
+}
 
 /* ESERCIZIO 8
-  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
+Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 8");
+
+  let variabile= 50;
+
+  if (typeof variabile=='number') {
+    console.log('La variabile inserita è di tipo', typeof variabile);
+  }else{
+    console.log('La variabile inserita è di tipo', typeof variabile);
+  }
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
