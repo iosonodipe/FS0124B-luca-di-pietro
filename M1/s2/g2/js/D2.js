@@ -5,15 +5,17 @@
 {
   console.log("ESERCIZIO 1");
 
-  let num1 = 20;
+  let num1 = 10;
   let num2 = 15;
 
   if (num1 > num2 && Number.isInteger(num1 + num2)) {
     console.log(num1, "è maggiore di", num2);
-  } else if (!Number.isInteger(num1 + num2)) {
+  } else if (num1 < num2 && Number.isInteger(num1 + num2)){
+    console.log(num2, "è maggiore di", num1);
+  }else if(!Number.isInteger(num1 + num2)) {
     console.log("Uno dei due numeri non è intero");
   } else {
-    console.log(num2, "è maggiore di", num1);
+    console.log("I numeri sono uguali");
   }
 }
 
