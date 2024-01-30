@@ -163,6 +163,11 @@ Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
+{
+  console.log('ESERCIZIO 9');
+
+}
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
@@ -183,25 +188,34 @@ Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
+console.log('ESERCIZIO 11');
+
 const me = {
   name: "John",
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city= 'Toronto';
+console.log(me);
 
 /* ESERCIZIO 12
-  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
+Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 12');
+
+delete me.lastName
+console.log(me);
 
 /* ESERCIZIO 13
-  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
+Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 13');
+me.skills.pop([2]);
+
+console.log(me.skills);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
