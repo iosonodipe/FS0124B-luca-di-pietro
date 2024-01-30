@@ -24,7 +24,7 @@ Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornit
 {
   console.log("ESERCIZIO 2");
 
-  let numero = 5.1;
+  let numero = 4;
 
   if (numero == 5 && Number.isInteger(numero)) {
     console.log("Il numero inserito è ugale a 5");
@@ -52,10 +52,33 @@ Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornit
 }
 
 /* ESERCIZIO 4
-  Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
+Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 4");
+
+  let num1 = 10;
+  let num2 = 8;
+
+  if (num1 == 8 && num2 == 8) {
+    console.log("Entrambi i numeri sono pari a 8");
+  } else if (num1 == 8 && num2 != 8) {
+    console.log("Il primo numero è uguale a 8");
+  } else if (num1 != 8 && num2 == 8) {
+    console.log("Il secondo numero è uguale a 8");
+  } else {
+    console.log("Nessuno dei numeri inseriti è pari a 8");
+  }
+
+  if (num1 + num2 == 8) {
+    console.log("La somma dei numeri inseriti è pari a 8");
+  } else if (num1 - num2 == 8) {
+    console.log("La sottrazione dei numeri inseriti è pari a 8");
+  } else {
+    console.log("La somma/sottrazione dei numeri inseriti non è pari a 8");
+  }
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
