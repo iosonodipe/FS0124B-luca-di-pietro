@@ -108,9 +108,26 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
-*/
+  */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 6");
+
+  let totalShoppingCart = 62;
+  let spedizione = 10;
+
+  if ((totalShoppingCart * 0.8) > 0 && (totalShoppingCart * 0.8) <= 50) {
+    totalShoppingCart = (totalShoppingCart*0.8)+spedizione;
+    console.log("Il totale del tuo ordine è pari a", totalShoppingCart);
+  } else if ((totalShoppingCart * 0.8) > 50) {
+    console.log(
+      "Spedizione gratuita! Il tuo ordine supera i 50 euro, il totale è pari a",
+      totalShoppingCart*0.8
+    );
+  } else {
+    console.log("Il carrello è vuoto");
+  }
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
