@@ -2,22 +2,36 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-let num1 = 20;
-let num2 = 15;
+{
+  console.log("ESERCIZIO 1");
+  let num1 = 20;
+  let num2 = 15;
 
-if (num1 > num2 && Number.isInteger(num1 + num2)) {
-  console.log(num1, "è maggiore di ", num2);
-} else if (!Number.isInteger(num1 + num2)) {
-  console.log("Uno dei due numeri non è intero");
-} else {
-  console.log(num2, "è maggiore di ", num1);
+  if (num1 > num2 && Number.isInteger(num1 + num2)) {
+    console.log(num1, "è maggiore di", num2);
+  } else if (!Number.isInteger(num1 + num2)) {
+    console.log("Uno dei due numeri non è intero");
+  } else {
+    console.log(num2, "è maggiore di", num1);
+  }
 }
 
 /* ESERCIZIO 2
-  Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
+Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 2");
+  let numero = 5.1;
+
+  if (numero == 5 && Number.isInteger(numero)) {
+    console.log("Il numero inserito è ugale a 5");
+  } else if (!Number.isInteger(numero)) {
+    console.log(numero, "non è un numero intero");
+  } else {
+    console.log(numero, "è diverso da 5");
+  }
+}
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
