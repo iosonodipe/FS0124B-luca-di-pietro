@@ -4,6 +4,7 @@
 
 {
   console.log("ESERCIZIO 1");
+
   let num1 = 20;
   let num2 = 15;
 
@@ -22,6 +23,7 @@ Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornit
 
 {
   console.log("ESERCIZIO 2");
+
   let numero = 5.1;
 
   if (numero == 5 && Number.isInteger(numero)) {
@@ -34,10 +36,20 @@ Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornit
 }
 
 /* ESERCIZIO 3
-  Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
+Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+  console.log("ESERCIZIO 3");
+
+  let numero = 10;
+
+  if (Number.isInteger(numero / 5)) {
+    console.log(numero, "è perfettamente divisibile per 5");
+  } else {
+    console.log(numero, "non è perfettamente divisibile per 5");
+  }
+}
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
