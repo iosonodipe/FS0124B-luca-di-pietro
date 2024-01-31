@@ -116,7 +116,7 @@ const charactersNames = [];
 console.log("ESERCIZIO 2");
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  charactersNames.push(new Object({name: starWarsCharacters[i].name}));
+  charactersNames.push(starWarsCharacters[i].name);
 }
 console.log(charactersNames);
 
@@ -131,7 +131,6 @@ const femaleCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
     femaleCharacters.push(starWarsCharacters[i]);
-    femaleCharacters.push(new Object({name: starWarsCharacters[i].name}));
   }
 }
 console.log(femaleCharacters);
@@ -244,6 +243,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       new Object({ name: starWarsCharacters[i].name, gender: "robot" })
     );
     // robots.push(new Object(starWarsCharacters[i]))
+    //usare object.assign
     // robots[i].gender.push('robot');
     // console.log(robots[i].gender);
   }
