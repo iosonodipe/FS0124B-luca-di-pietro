@@ -116,7 +116,7 @@ const charactersNames = [];
 console.log("ESERCIZIO 2");
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  charactersNames.push(starWarsCharacters[i].name);
+  charactersNames.push(new Object({name: starWarsCharacters[i].name}));
 }
 console.log(charactersNames);
 
@@ -131,6 +131,7 @@ const femaleCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
     femaleCharacters.push(starWarsCharacters[i]);
+    femaleCharacters.push(new Object({name: starWarsCharacters[i].name}));
   }
 }
 console.log(femaleCharacters);
@@ -239,7 +240,9 @@ const robots = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "n/a") {
-    robots.push(new Object({name: starWarsCharacters[i].name, gender: 'robot'}))
+    robots.push(
+      new Object({ name: starWarsCharacters[i].name, gender: "robot" })
+    );
     // robots.push(new Object(starWarsCharacters[i]))
     // robots[i].gender.push('robot');
     // console.log(robots[i].gender);
@@ -253,6 +256,19 @@ console.log(robots);
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
+console.log("ESERCIZIO 9");
+
+for (let i = 0; i < charactersNames.length; i++) {
+  // if (charactersNames[i].name === femaleCharacters[i].name) {}
+}
+
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
+console.log('ESERCIZIO 10');
+
+const ran= Math.floor(Math.random()*starWarsCharacters.length)
+
+console.log(ran, starWarsCharacters[ran].name);
+console.log('Ciao il mio nome è', starWarsCharacters[ran].name, ', sono alto', starWarsCharacters[ran].height, 'e ho una massa di', starWarsCharacters[ran].mass);
