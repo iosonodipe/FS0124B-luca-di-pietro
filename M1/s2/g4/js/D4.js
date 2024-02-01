@@ -59,6 +59,10 @@ function boundary(n) {
   }
 }
 
+// function boundary(n){
+//     return (n >= 20 && n <= 100) || n === 4000
+// }  metodo abbreviato
+
 console.log(boundary(101));
 
 /* ESERCIZIO 5
@@ -120,17 +124,47 @@ console.log(reverseString("Luca"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 8");
+
+function upperFirst(parole) {
+  let lettere_maiusc = parole.split(" ");
+  let risultato= [];
+
+  for (let index = 0; index < lettere_maiusc.length; index++) {
+    let primaLettera = lettere_maiusc[index].charAt(0).toUpperCase();
+    let restoParola = lettere_maiusc[index].slice(1);
+    let parolaCompleta = primaLettera + restoParola;
+
+    risultato.push(parolaCompleta)
+  }
+
+  return risultato.join(' ');
+}
+
+console.log(upperFirst("ciao luca"));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 9");
+
+function cutString(parola) {}
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 10");
+
+function giveMeRandom(n) {
+  let array = [];
+  for (let i = 0; i < n; i++) {
+    array.push(Math.floor(Math.random() * 10)); 
+  }
+
+  return array;
+}
+
+console.log(giveMeRandom(20));
