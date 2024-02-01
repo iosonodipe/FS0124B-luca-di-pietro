@@ -84,7 +84,23 @@ console.log(epify("EPICODE"));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 6');
+
+function check3and7(n) {
+    let check;
+    if (n>= 0) {
+        if (n % 3 == 0) {
+            check= 'Il numero inserito è multiplo di 3';
+        } else if(n % 7 == 0){
+            check= 'Il numero inserito è multiplo di 7';
+        }
+    } else {
+        check= 'Il numero inserito è negativo.';
+    }
+    return check;
+}
+
+console.log(check3and7(6));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
