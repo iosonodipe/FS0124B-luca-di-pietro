@@ -24,14 +24,25 @@ let crazySum = (n1, n2) => {
   }
 };
 
-console.log(crazySum(3,3));
+console.log(crazySum(3, 3));
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERICIZIO 3");
+
+function crazyDiff(a, b = 19) {
+  c = Math.abs(a - b);
+  if (a > 19) {
+    return c*3 
+  } else {
+    return c;
+  }
+}
+
+console.log(crazyDiff(17));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
