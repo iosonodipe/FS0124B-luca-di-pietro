@@ -73,7 +73,7 @@ function epify(a) {
   if (a.slice(0) == "EPICODE") {
     return a;
   } else {
-    return 'EPICODE ' + a;
+    return "EPICODE " + a;
   }
 }
 
@@ -84,20 +84,20 @@ console.log(epify("EPICODE"));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-console.log('ESERCIZIO 6');
+console.log("ESERCIZIO 6");
 
 function check3and7(n) {
-    let check;
-    if (n>= 0) {
-        if (n % 3 == 0) {
-            check= 'Il numero inserito è multiplo di 3';
-        } else if(n % 7 == 0){
-            check= 'Il numero inserito è multiplo di 7';
-        }
-    } else {
-        check= 'Il numero inserito è negativo.';
+  let check;
+  if (n >= 0) {
+    if (n % 3 == 0) {
+      check = "Il numero inserito è multiplo di 3";
+    } else if (n % 7 == 0) {
+      check = "Il numero inserito è multiplo di 7";
     }
-    return check;
+  } else {
+    check = "Il numero inserito è negativo.";
+  }
+  return check;
 }
 
 console.log(check3and7(6));
@@ -106,7 +106,14 @@ console.log(check3and7(6));
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 7");
+
+function reverseString(parola) {
+  let parolaReverse = parola.split("").reverse().join("");
+  return parolaReverse;
+}
+
+console.log(reverseString("Luca"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
