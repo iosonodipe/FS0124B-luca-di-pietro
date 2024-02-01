@@ -2,11 +2,11 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-console.log('ESERCIZIO 1');
+console.log("ESERCIZIO 1");
 
-let area = (l1, l2) => l1*l2
+let area = (l1, l2) => l1 * l2;
 
-console.log(area(3,2));
+console.log(area(3, 2));
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -14,7 +14,17 @@ console.log(area(3,2));
  la loro somma moltiplicata per tre.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 2");
+
+let crazySum = (n1, n2) => {
+  if (n1 === n2) {
+    return (n1 + n2) * 3;
+  } else {
+    return n1 + n2;
+  }
+};
+
+console.log(crazySum(3,3));
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
