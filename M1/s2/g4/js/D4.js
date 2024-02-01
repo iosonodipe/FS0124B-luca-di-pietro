@@ -131,9 +131,7 @@ function upperFirst(parole) {
   let risultato= [];
 
   for (let index = 0; index < lettere_maiusc.length; index++) {
-    let primaLettera = lettere_maiusc[index].charAt(0).toUpperCase();
-    let restoParola = lettere_maiusc[index].slice(1);
-    let parolaCompleta = primaLettera + restoParola;
+    let parolaCompleta = (lettere_maiusc[index].charAt(0).toUpperCase())+lettere_maiusc[index].slice(1);
 
     risultato.push(parolaCompleta)
   }
@@ -141,16 +139,22 @@ function upperFirst(parole) {
   return risultato.join(' ');
 }
 
-console.log(upperFirst("ciao luca"));
+console.log(upperFirst("ciao luca sono luca"));
 
 /* ESERCIZIO 9
- Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
+ Scrivi una funzione di nome "cutString", che riceve  come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
 console.log("ESERCIZIO 9");
 
-function cutString(parola) {}
+function cutString(parola) {
+  let nuovaParola= parola.slice(1, (parola.length-1))
+
+  return nuovaParola;
+}
+
+console.log(cutString('ciao luca'));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
