@@ -67,7 +67,17 @@ console.log(boundary(101));
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERICIZIO 5");
+
+function epify(a) {
+  if (a.slice(0) == "EPICODE") {
+    return a;
+  } else {
+    return 'EPICODE ' + a;
+  }
+}
+
+console.log(epify("EPICODE"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
