@@ -36,7 +36,7 @@ console.log("ESERICIZIO 3");
 function crazyDiff(a, b = 19) {
   c = Math.abs(a - b);
   if (a > 19) {
-    return c*3 
+    return c * 3;
   } else {
     return c;
   }
@@ -49,7 +49,17 @@ console.log(crazyDiff(17));
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 4");
+
+function boundary(n) {
+  if ((n >= 20 && n <= 100) || n === 4000) {
+    return "True";
+  } else {
+    return "False";
+  }
+}
+
+console.log(boundary(101));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
