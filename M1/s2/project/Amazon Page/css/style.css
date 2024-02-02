@@ -32,7 +32,7 @@ header a{
 
 main{
     background-color: #E9EDEE;
-    margin: 2rem 2rem 0rem 2rem;
+    padding: 2rem 2rem 0rem 2rem;
 }
 
 /* #container{
@@ -73,6 +73,7 @@ h1{
 #perfect-gift{
     padding: 0.8rem 1rem;
     background-color: white;
+    margin-bottom: 2rem;
 }
 
 .titoli{
@@ -89,36 +90,35 @@ h1{
 
 #cards{
     display: flex;
+    justify-content: center;
     margin: 0.8rem 0rem;
-    height: 400px;
+}
+
+.card-img{
+    height: 300px;
+    width: 100%;
+    margin-right: 2rem;
+    border-radius: 5%;
+    box-shadow: 4px 8px 15px 1px rgba(0,0,0,0.44);
+    background-position: center;
 }
 
 #gift1{
     background-image: url(../assets/images/img_1.jpg);
-    height: 400px;
 }
 #gift2{
     background-image: url(../assets/images/img_2.jpg);
-    height: 400px;
 }
 #gift3{
     background-image: url(../assets/images/img_3.jpg);
-    height: 400px;
 }
 #gift4{
     background-image: url(../assets/images/img_4.jpg);
-    height: 400px;
+    margin-right: 0;
 }
 
-/* 
-#cards img{
-    object-fit: cover;
-    height: 520px;
-    border-radius: 5%;
-} */
-
 .categoria{
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
@@ -145,6 +145,6 @@ footer a{
 
 footer img{
     width: 200px;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
 }
