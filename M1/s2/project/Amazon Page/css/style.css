@@ -26,10 +26,45 @@ header nav{
 
 header a{
     text-decoration: none;
-    color: white˝˝;
+    color: white;
     margin-right: 1rem;
 }
 
 #container{
-    margin: 2.5rem 2rem 0rem 2rem;
+    margin: 2rem 2rem 0rem 2rem;
+}
+
+.sezione-testo{
+    text-align: center;
+    color: white;
+}
+
+#orange{
+    margin-bottom: 2rem;
+    background-color: #FB6300;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#bg-holiday{
+    margin-bottom: 2rem;
+    padding-top: 3.2rem;
+    padding-bottom: 2.2rem;
+    background-image: url('../assets/images/bg-image.png');
+    background-position: center;
+}
+
+#bg-holiday p{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+
+#perfect-gift{
+    
 }
