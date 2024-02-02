@@ -96,7 +96,7 @@ cars.push({
 });
 
 const carsCopy = [];
-cars.concat(carsCopy)
+cars.concat(carsCopy);
 
 for (let i = 0; i < carsCopy.length; i++) {
   delete carsCopy[i].trims;
@@ -126,10 +126,10 @@ console.log(justTrims);
 console.log("ESERCIZIO 8");
 
 for (let i = 0; i < cars.length; i++) {
-  if(cars[i].color.charAt(0) === 'b'){
-    console.log('Fizz');
+  if (cars[i].color.charAt(0) === "b") {
+    console.log("Fizz");
   } else {
-    console.log('Buzz');
+    console.log("Buzz");
   }
 }
 
@@ -142,6 +142,17 @@ console.log("ESERCIZIO 9");
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ];
+
+let i = 0;
+
+while (i < 17) {
+  if (numericArray[i] !== 32) {
+    console.log(numericArray[i]);
+  } else {
+    i = 32;
+  }
+  i++;
+}
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
