@@ -163,3 +163,26 @@ while (i < 17) {
 console.log("ESERCIZIO 10");
 
 const charactersArray = ["g", "n", "u", "z", "d"];
+const nuovoArray= [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  switch (charactersArray[i]) {
+    case 'g':
+    nuovoArray.push(7)
+    break;
+    case 'n':
+    nuovoArray.push(14)
+    break;
+    case 'u':
+    nuovoArray.push(21)
+    break;
+    case 'z':
+    nuovoArray.push(26)
+    break;
+    case 'd':
+    nuovoArray.push(4)
+    break;
+  }
+}
+
+console.log(nuovoArray);
