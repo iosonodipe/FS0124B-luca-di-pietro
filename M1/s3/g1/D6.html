@@ -30,6 +30,19 @@
       .myHeading {
         color: #ff00d6;
       }
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
     </style>
   </head>
 
@@ -185,10 +198,10 @@
       const makeItClickable = function () {
         const titoloPagina = document.querySelector("h1");
         let lunghezzaTitolo = titoloPagina.innerText.length - 1;
-        let i= lunghezzaTitolo;
+        let i = lunghezzaTitolo;
         titoloPagina.addEventListener("click", function () {
-            titoloPagina.innerText = titoloPagina.innerText.slice(0, i);
-            i = i-1;
+          titoloPagina.innerText = titoloPagina.innerText.slice(0, i);
+          i = i - 1;
         });
       };
 
@@ -199,22 +212,51 @@
         */
 
       const revealFooterLink = function () {
-        const footer= document.querySelector('footer')
-        const footerLink= document.querySelector('footer a').href
+        const footer = document.querySelector("footer");
+        const footerLink = document.querySelector("footer a").href;
 
-      footer.addEventListener('click', function() {
-        alert(footerLink)
-      })
+        footer.addEventListener("click", function () {
+          alert(footerLink);
+        });
       };
 
-      revealFooterLink()
+      revealFooterLink();
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {};
+      const tableArea = document.querySelector("#tableArea");
+      const table = document.createElement("table");
+      const tableTag = document.querySelector("table");
+
+      const generateTable = function () {
+        tableArea.append(table);
+        const tr= table.insertRow()
+        for(i= 0; i< 4; i++){
+          switch (i) {
+            case 0:
+              td= tr.insertCell()
+              td.append(document.createTextNode('Immagine'))
+              break;
+            case 1:
+              td= tr.insertCell()
+              td.append(document.createTextNode('Nome prodotto'))
+              break;
+            case 2:
+              td= tr.insertCell()
+              td.append(document.createTextNode('Quantità'))
+              break;
+            case 3:
+              td= tr.insertCell()
+              td.append(document.createTextNode('Prezzo'))
+              break;
+          }
+        }
+      };
+
+      generateTable();
 
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
