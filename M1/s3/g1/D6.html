@@ -133,7 +133,7 @@
         */
 
       const changeUrls = function () {
-        const url = document.querySelectorAll("div a");
+        const url = document.querySelectorAll("div a"); //oppure .querySelectorAll(a:not(footer a))
         url.forEach((a) => {
           a.href = "https://www.google.com";
         });
@@ -197,13 +197,17 @@
 
       const makeItClickable = function () {
         const titoloPagina = document.querySelector("h1");
-        let lunghezzaTitolo = titoloPagina.innerText.length - 1;
-        let i = lunghezzaTitolo;
+        // let lunghezzaTitolo = titoloPagina.innerText.length - 1;
+        // let i = lunghezzaTitolo;
+        // titoloPagina.addEventListener("click", function () {
+          //   titoloPagina.innerText = titoloPagina.innerText.slice(0, i);
+          //   i = i - 1;
+          // });
         titoloPagina.addEventListener("click", function () {
-          titoloPagina.innerText = titoloPagina.innerText.slice(0, i);
-          i = i - 1;
+        let nuovaStringa = titoloPagina.innerHTML.slice(0, -1) //seleziona gli elementi della stringa da 0 alla penultima posizione
+        titoloPagina.innerText = nuovaStringa;
         });
-      };
+      }
 
       makeItClickable();
 
@@ -233,24 +237,24 @@
 
       const generateTable = function () {
         tableArea.append(table);
-        const tr= table.insertRow()
-        for(i= 0; i< 4; i++){
+        const tr = table.insertRow();
+        for (i = 0; i < 4; i++) {
           switch (i) {
             case 0:
-              td= tr.insertCell()
-              td.append(document.createTextNode('Immagine'))
+              td = tr.insertCell();
+              td.append(document.createTextNode("Immagine"));
               break;
             case 1:
-              td= tr.insertCell()
-              td.append(document.createTextNode('Nome prodotto'))
+              td = tr.insertCell();
+              td.append(document.createTextNode("Nome prodotto"));
               break;
             case 2:
-              td= tr.insertCell()
-              td.append(document.createTextNode('Quantità'))
+              td = tr.insertCell();
+              td.append(document.createTextNode("Quantità"));
               break;
             case 3:
-              td= tr.insertCell()
-              td.append(document.createTextNode('Prezzo'))
+              td = tr.insertCell();
+              td.append(document.createTextNode("Prezzo"));
               break;
           }
         }
