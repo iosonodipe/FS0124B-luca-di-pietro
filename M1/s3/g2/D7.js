@@ -25,26 +25,76 @@ arrayDieci();
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+let dieciNumeri = arrayDieci();
+let numeriPari = () => dieciNumeri.filter((numero) => numero % 2 == 0);
+
+numeriPari();
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+let somma = 0;
+
+function sommaNumeri() {
+  dieciNumeri.forEach((numero) => {
+    somma = somma + numero;
+  });
+  return somma;
+}
+
+sommaNumeri();
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+function sommaNumeriReduce() {
+  let somma = dieciNumeri.reduce((acc, curr) => acc + curr, 0);
+  return somma;
+}
+
+sommaNumeriReduce();
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+let arrayIncrementato = (dieciNumeri, n) =>
+  dieciNumeri.map((numero) => (numero = numero + n));
+
+arrayIncrementato(dieciNumeri, 1);
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+let arrayStringhe = ["ciao", "sei", "proprio", "uno", "scemo"];
+
+let stringToNumber = (stringhe) =>
+  arrayStringhe.map((stringa) => (stringa = stringa.length));
+
+stringToNumber(arrayStringhe);
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+let arrayNumeriDispari = [];
+j = 1;
+
+function numeriDispari() {
+  for (let i = 0; i < 99; i++) {
+    if (j % 2 != 0) {
+      arrayNumeriDispari.push(j);
+    }
+    j++;
+  }
+  return arrayNumeriDispari;
+}
+
+console.log(numeriDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
