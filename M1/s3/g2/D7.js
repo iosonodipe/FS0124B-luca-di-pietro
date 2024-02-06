@@ -71,11 +71,12 @@ arrayIncrementato(dieciNumeri, 1);
 */
 
 let arrayStringhe = ["ciao", "sei", "proprio", "uno", "scemo"];
+let arrayNumeri = [];
 
 let stringToNumber = (stringhe) =>
-  arrayStringhe.map((stringa) => (stringa = stringa.length));
+  (arrayNumeri = arrayStringhe.map((stringa) => (stringa = stringa.length)));
 
-stringToNumber(arrayStringhe);
+stringToNumber(arrayNumeri);
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
@@ -94,7 +95,7 @@ function numeriDispari() {
   return arrayNumeriDispari;
 }
 
-console.log(numeriDispari());
+numeriDispari();
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -216,17 +217,49 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+let annoFilm = movies[0].Year;
+
+let filmVecchio = () => {
+  movies.forEach((film) => {
+    if (film.Year < annoFilm) annoFilm = film.Year;
+  });
+  return annoFilm;
+};
+
+filmVecchio();
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+
+let films = 0;
+
+let numeroFilm = () => {
+  movies.forEach((film) => {
+    if (film.Type === "movie") films++;
+  });
+  return films;
+};
+
+numeroFilm();
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+let arrayTitoli = [];
+
+let titoliFilm = () => (arrayTitoli = movies.map((film) => film.Title));
+
+titoliFilm();
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
+let filmDuemila = () => movies.filter((film) => film.Year >= 2000);
+
+filmDuemila();
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
