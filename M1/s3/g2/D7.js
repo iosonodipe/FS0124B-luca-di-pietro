@@ -4,7 +4,7 @@
 */
 
 let concatenaStringhe = (str1, str2) =>
-  console.log(str1.slice(0, 2) + str2.slice(-3));
+  console.log((str1.slice(0, 2) + str2.slice(-3)).toUpperCase());
 concatenaStringhe("ciao", "alessandro");
 
 /* ESERCIZIO 2 (for)
