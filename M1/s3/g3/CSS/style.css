@@ -3,17 +3,55 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+}
+
 #container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+  width: fit-content;
+  height: inherit;
+  padding: 20px;
+  background-color: blanchedalmond;
+  text-align: center;
 }
 
-#tasks {
+/* #tasks {
   display: flex;
-}
-
-/* #tasks li {
-  display: inline-block;
 } */
+
+#testo {
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+input::placeholder {
+  color: rgb(106, 78, 78);
+}
+
+.redplaceholder::placeholder {
+  color: red;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+#aggiungi {
+  font-size: 1.2rem;
+}
+
+.completato {
+  color: rgb(106, 78, 78);
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+ul {
+  font-size: 1.2rem;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+#divLista {
+  text-align: left;
+}
