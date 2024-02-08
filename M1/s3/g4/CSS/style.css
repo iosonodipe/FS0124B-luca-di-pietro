@@ -1,0 +1,35 @@
+.container {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.wrap-numeri,
+.tabella {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tabella {
+  flex: 0 1 calc(100% / 3);
+}
+
+.numero {
+  flex: 0 1 calc(100% / 9);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.wrap-tabelle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cella-tabella {
+  flex: 0 1 calc(100% / 4);
+  padding: 20px 0;
+  text-align: center;
+}
