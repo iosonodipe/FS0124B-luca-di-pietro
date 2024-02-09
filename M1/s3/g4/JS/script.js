@@ -1,10 +1,10 @@
 const wrapNumeri = document.querySelector(".wrap-numeri");
-const numeroTabellone = document.querySelectorAll(".numero");
 const inputSchede = document.querySelector(".input-schede");
 const bottoneEstrai = document.querySelector(".estrai");
 let numeriEstratti = [0];
 
 creaTabellone();
+const numeroTabellone = document.querySelectorAll(".numero");
 
 bottoneEstrai.addEventListener("click", estraiNumero);
 
@@ -21,37 +21,16 @@ function creaScheda() {}
 
 function estraiNumero() {
   let numeroRandom = Math.floor(Math.random() * 90 + 1);
-  numeriEstratti.forEach(
-    (numero) =>
-      function () {
-        if (numero != numeroRandom) {
-          numeriEstratti.push(numeroRandom);
-        }
-      }
-  );
-  numeroTabellone.forEach(
-    (cella) =>
-      function () {
-        if (cella.innerText == numeroRandom) {
-          cella.classList.add("colore");
-        }
-      }
-  );
+  numeriEstratti.forEach((numero) => {
+    // console.log(numeroRandom);
+    if (numero != numeroRandom) {
+      numeriEstratti.push(numeroRandom);
+      //   console.log(numeriEstratti);
+    }
+  });
+  numeroTabellone.forEach((cella) => {
+    if (cella.innerText == numeroRandom) {
+      cella.classList.add("colore");
+    }
+  });
 }
-
-// function estraiNumero() {
-//   let numeroRandom = Math.floor(Math.random() * 90 + 1);
-//   numeriEstratti.forEach(
-//     (n) =>
-//       function () {
-//         if (n != numeroRandom) {
-//           numeriEstratti.push(numeroRandom);
-//           wrapNumeri.forEach((numero) => {
-//             if (numero.innerText == n) {
-//               numero.classList.add("colore");
-//             }
-//           });
-//         }
-//       }
-//   );
-// }

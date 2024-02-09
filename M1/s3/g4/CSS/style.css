@@ -18,9 +18,10 @@
 }
 
 .numero {
-  flex: 0 1 calc(100% / 9);
+  flex: 0 1 10%;
   padding: 20px 0;
   text-align: center;
+  border: 1px solid black;
 }
 
 .wrap-tabelle {
