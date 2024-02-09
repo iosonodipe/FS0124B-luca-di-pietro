@@ -318,38 +318,100 @@ const movies = [
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+let esempio = {
+  prop1: "ciao",
+  prop2: "luca",
+  prop3: "dipe",
+};
+
+let deleteProp = (oggetto, stringa) => {
+  delete oggetto[stringa];
+  return oggetto;
+};
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+
+let newestMovie = () => {
+  let annoFilm = movies[0].Year;
+  movies.forEach((film) => {
+    if (film.Year > annoFilm) annoFilm = film.Year;
+  });
+  return annoFilm;
+};
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+let numeroFilm = () => {
+  let films = 0;
+  movies.forEach((film) => {
+    if (film.Type === "movie") films++;
+  });
+  return films;
+};
+
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+
+let onlyTheYears = () => {
+  let anniFilm = [];
+  anniFilm = movies.map((film) => film.Year);
+  return anniFilm;
+};
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+let filmNovecento = () => movies.filter((film) => film.Year <= 1999);
+
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+let sumAllTheYears = () =>
+  movies.reduce((acc, curr) => acc + parseInt(curr.Year), 0);
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+function searchByTitle(stringa) {
+  let filmMatch = movies.filter((film) => film.Title.toLowerCase().includes(stringa));
+  return filmMatch;
+}
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(titolo) {
+  obj = {
+    match: [],
+    unmatch: [],
+  };
+
+  movies.forEach((film) => {
+    if (film.Title.toLowerCase().includes(titolo)) obj.match.push(film.Title);
+    else obj.unmatch.push(film.Title);
+  });
+  return obj;
+}
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+let removeIndex = (numero) => {
+  let filmDaRimuovere = movies.findIndex((film, i) => i == numero);
+  movies.splice(filmDaRimuovere, 1);
+  return movies;
+};
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -389,15 +451,15 @@ let sfondoRosso = () => {
 
 let aggiungiRiga = () => {
   let ul = document.querySelector("#myList");
-  let li = document.createElement('li')
-  ul.append(li)
+  let li = document.createElement("li");
+  ul.append(li);
 };
 
 /* ESERCIZIO 25
 Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-let svuotaLista = () => document.querySelector("#myList").innerHTML= ''
+let svuotaLista = () => (document.querySelector("#myList").innerHTML = "");
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
@@ -405,7 +467,7 @@ let svuotaLista = () => document.querySelector("#myList").innerHTML= ''
 
 let aggiungiClasse = () => {
   tr = document.querySelectorAll("tr");
-  tr.forEach((el) => (el.classList.add('test')));
+  tr.forEach((el) => el.classList.add("test"));
 };
 
 // [EXTRA] JS Avanzato
