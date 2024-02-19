@@ -1,0 +1,90 @@
+@media screen and (min-width: 576px){
+    body{
+        font-size: 1.5rem;
+    }
+    main{
+        padding: 25px 20px;
+    }
+    h1{
+        font-size: 4.6rem;
+        line-height: 5rem;
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .article-table{
+        display: flex;
+        justify-content: center;
+    }
+    table{
+        margin-top: 6rem;
+        margin-bottom: 8rem;
+        font-size: 1.3rem;
+    }
+    table th{
+        padding: 12px 30px;
+    }
+    input{
+        padding: 12px;
+        width: 65%;
+    }
+    button{
+        padding: 12px 25px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        padding: 15px 70px;
+        line-height: 3rem;
+    }
+    header{
+        display: flex;
+    }
+    header img{
+        margin: 0;
+    }
+    header div, header nav{
+        flex-grow: 2;
+    }
+    header p{
+        flex-grow: 6;
+    }
+    header li{
+        display: inline-block;
+    }
+    main{
+        padding: 30px 25px;
+    }
+    table{
+        margin-top: 4rem;
+    }
+    table th{
+        padding: 12px 60px;
+    }
+    .main-video-form{
+        display: flex;
+        align-items: stretch;
+    }
+    .main-video-form section{
+        border-radius: 20px;
+    }
+    .main-video-form iframe{
+        flex-grow: 5;
+    }
+    .main-video-form section{
+        flex-grow: 5;
+    }
+    .aside-div div{
+        margin: 0;
+        flex-grow: 3;
+        border-top: none;
+        border-bottom: none;
+    }
+    .aside-div{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+}
