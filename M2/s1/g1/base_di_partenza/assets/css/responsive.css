@@ -41,8 +41,11 @@
     }
     header{
         display: flex;
+        text-align: left;
+        padding: 10px;
+        vertical-align: middle;
     }
-    header img{
+    header div img, header p{
         margin: 0;
     }
     header div, header nav{
