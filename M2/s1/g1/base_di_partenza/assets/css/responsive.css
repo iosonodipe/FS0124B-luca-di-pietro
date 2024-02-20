@@ -43,16 +43,20 @@
         display: flex;
         text-align: left;
         padding: 10px;
-        vertical-align: middle;
+        /* vertical-align: middle; */
     }
     header div img, header p{
         margin: 0;
     }
-    header div, header nav{
+    header div{
+        flex-grow: 8;
+        vertical-align: middle;
+    }
+    header nav{
         flex-grow: 2;
     }
     header p{
-        flex-grow: 6;
+        display: inline-block;
     }
     header li{
         display: inline-block;
@@ -74,10 +78,10 @@
         border-radius: 20px;
     }
     .main-video-form iframe{
-        flex-grow: 5;
+        flex-basis: 50%;
     }
     .main-video-form section{
-        flex-grow: 5;
+        flex-basis: 50%
     }
     .aside-div div{
         margin: 0;
