@@ -395,11 +395,31 @@ aside div {
   padding: 1em;
 }
 
+.absolute-element-card{
+  position: absolute;
+  padding: 10px 15px;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  margin-bottom: 0;
+}
+
+.absolute-element-card i{
+  color: #CCCCCC;
+  font-size: 4rem;
+}
+
 @media screen and (min-width: 1200px) {
   aside div {
     display: inline-block;
     width: 33.333%;
     margin-inline: -2px;
+  }
+  
+  .absolute-element-card{
+    right: -30px;
   }
 }
 aside div p:last-child {
