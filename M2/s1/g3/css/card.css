@@ -1,0 +1,44 @@
+.card__wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    background-color: var(--yellow);
+    border-radius: 80px;
+
+    min-width: 400px;
+    width: 15vw;
+    overflow: hidden;
+}
+
+.card__product-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card__product-name{
+    font-weight: bold;
+}
+
+.card__product-name p{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.card__atc{
+    text-align: center;
+}
+
+.card__atc button{
+    background-color: var(--yellow2);
+    border: none;
+    padding: 15px 60px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 0.9rem
+}
+
