@@ -1,0 +1,36 @@
+.nav__wrap{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: var(--yellow);
+    border-radius: 50px;
+    padding: 15px;
+
+    width: 100%;
+}
+
+.nav__wrap img{
+    width: 60px;
+}
+
+.nav__btn{
+    background-color: var(--yellow2);
+    border-radius: 50px;
+
+    flex: 1 0 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-big{
+    flex: 2 0 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
