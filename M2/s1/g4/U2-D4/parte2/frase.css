@@ -35,9 +35,10 @@
 #secondo,
 #terzo {
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
 }
+
 
 #secondo {
     animation-delay: 2s;
@@ -52,12 +53,18 @@
         opacity: 0;
         top: 200px;
     }
-
+    35% {
+        opacity: 0;
+        top: 180px;
+    }
     50% {
         opacity: 1;
         top: 170px;
     }
-
+    65% {
+        opacity: 0;
+        top: 160px;
+    }
     100% {
         opacity: 0;
         top: 140px;

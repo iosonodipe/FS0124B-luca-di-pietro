@@ -44,7 +44,7 @@
 }
 
 .postit:hover{
-    transform: rotate(0deg) translateZ(60px);
+    transform: rotate(0deg) scale(1.2);
     /* z-index: 1; */
 }
 
@@ -57,15 +57,15 @@
 
 
 @keyframes stick__giallo{
-    from{transform: translateZ(200px) rotate(-8deg);}
+    from{transform: translateZ(400px) rotate(-8deg);}
     to{transform: translateZ(0px) rotate(-8deg);}
 }
 @keyframes stick__verde{
-    from{transform: translateZ(200px) rotate(10deg);}
+    from{transform: translateZ(400px) rotate(10deg);}
     to{transform: translateZ(0px) rotate(10deg);}
 }
 @keyframes stick__viola{
-    from{transform: translateZ(200px) rotate(-12deg);}
+    from{transform: translateZ(400px) rotate(-12deg);}
     to{transform: translateZ(0px) rotate(-12deg);}
 }
 
