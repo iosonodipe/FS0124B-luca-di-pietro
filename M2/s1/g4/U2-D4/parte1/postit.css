@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+.postit__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-content: flex-start; */
+    gap: 70px;
+    padding: 60px 60px;
+
+    background-color: #666666;
+
+    perspective: 700px;
+    transform-style: preserve-3d;
+}
+
+.postit {
+    /* transform-style: preserve-3d; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 300px;
+    padding: 40px 30px;
+    aspect-ratio: 1/0.8;
+
+    -webkit-box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.5);
+    box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.5);
+
+    transition: transform 0.5s;
+}
+
+.postit span {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.postit:hover{
+    transform: rotate(0deg) translateZ(60px);
+    /* z-index: 1; */
+}
+
+.giallo, .verde, .viola{
+    animation-duration: 1s;
+    /* animation-fill-mode:both; */
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes stick__giallo{
+    from{transform: translateZ(200px) rotate(-8deg);}
+    to{transform: translateZ(0px) rotate(-8deg);}
+}
+@keyframes stick__verde{
+    from{transform: translateZ(200px) rotate(10deg);}
+    to{transform: translateZ(0px) rotate(10deg);}
+}
+@keyframes stick__viola{
+    from{transform: translateZ(200px) rotate(-12deg);}
+    to{transform: translateZ(0px) rotate(-12deg);}
+}
+
+.giallo {
+    transform: rotate(-8deg);
+
+    animation-name: stick__giallo;
+
+    background: rgb(250, 251, 201);
+    background: -moz-linear-gradient(180deg, rgba(250, 251, 201, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(250, 251, 201, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    background: linear-gradient(180deg, rgba(250, 251, 201, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafbc9", endColorstr="#000000", GradientType=1);
+}
+
+.verde {
+    transform: rotate(10deg);
+
+    animation-name: stick__verde;
+    animation-delay: 0.1s;
+
+    background: rgb(204, 254, 206);
+    background: -moz-linear-gradient(180deg, rgba(204, 254, 206, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(204, 254, 206, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    background: linear-gradient(180deg, rgba(204, 254, 206, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccfece", endColorstr="#000000", GradientType=1);
+}
+
+.viola {
+    transform: rotate(-12deg);
+
+    animation-name: stick__viola;
+    animation-delay: 0.2s;
+
+    background: rgb(198, 198, 241);
+    background: -moz-linear-gradient(180deg, rgba(198, 198, 241, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(198, 198, 241, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    background: linear-gradient(180deg, rgba(198, 198, 241, 1) 75%, rgba(0, 0, 0, 0.21957720588235297) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c6c6f1", endColorstr="#000000", GradientType=1);
+}
