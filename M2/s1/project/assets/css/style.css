@@ -2,6 +2,7 @@
     --giallo: #ffc017;
     --nero: #191919;
     --verde: #1a8917;
+    --grigio: #8f8f8f;
 }
 
 * {
@@ -29,7 +30,7 @@ header {
     top: 0;
 
     background-color: var(--giallo);
-    padding: 20px 0;
+    padding: 20px 20px;
     border-bottom: 1px solid black;
 }
 
@@ -75,19 +76,19 @@ header {
 
 }
 
-.section__quote-text h2{
+.section__quote-text h2 {
     font-size: 7rem;
     font-family: "Spectral", sans-serif;
-    letter-spacing: -7px ;
+    letter-spacing: -7px;
 }
 
-.section__quote-text h3{
+.section__quote-text h3 {
     font-size: 1.5rem;
     width: 440px;
     margin: 25px 0 50px 0;
 }
 
-.main__quote button{
+.main__quote button {
     font-size: 1.2rem;
     font-weight: 300;
     padding: 10px 50px;
@@ -95,12 +96,12 @@ header {
 
 /* section trending */
 
-.main__trending{
+.main__trending {
     padding: 40px 0;
     border-bottom: 1px solid #F2F2F2;
 }
 
-.section__trending-title{
+.section__trending-title {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -108,70 +109,182 @@ header {
     margin-bottom: 15px;
 }
 
-.section__trending-articles{
+.section__trending-articles {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.section__trending-articles img, .article-author img{
+.section__trending-articles img,
+.article-author img {
     width: 20px;
     aspect-ratio: 1/1;
     border-radius: 3px;
 }
 
-.article{
+.article {
     display: flex;
     gap: 20px;
     width: 376px;
 }
 
-.section__trending-article-number{
+.section__trending-article-number {
     font-size: 2rem;
     color: #F2F2F2;
-    
+
 }
 
-.article-text{
+.article-text {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.article-author{
+.article-author {
     display: flex;
     align-items: center;
     gap: 4px;
     font-size: 0.8rem;
-    color: #8A8A8A;
+    color: var(--grigio);
 }
 
-.article-author a{
+.article-author a {
     color: var(--nero);
     font-weight: bold;
 }
 
-.article-title h3{
+.article-title h3 {
     font-weight: bold;
     line-height: 1.3rem;
 }
 
-.article-date{
+.article-date {
     display: flex;
     align-items: center;
     gap: 5px;
 
-    color: #8F8F8F;
+    color: var(--grigio);
     font-size: 0.8rem;
     font-weight: 350;
 }
 
 /* section articles list */
 
-.main__articles{
+.main__articles {
     padding: 60px 0;
 }
 
-.section__articles-list-article{
+.flex-wrap {
+    display: flex;
+}
+
+.align-fix {
+    align-items: center;
+    gap: 5px;
+}
+
+.section__articles-list {
     width: 695px;
+}
+
+.section__articles-list h3 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+    font-weight: 900;
+}
+
+.section__articles-list p {
+    color: var(--grigio);
+    font-weight: 300;
+    line-height: 1.2rem;
+}
+
+.section__articles-list-article {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    /* width: 695px; */
+}
+
+.section__articles,
+.width-fix {
+    width: 475px;
+}
+
+.article-date2 {
+    display: flex;
+    justify-content: space-between;
+    width: 475px;
+}
+
+.article-date-list {
+    display: flex;
+}
+
+.section__articles-list-images img {
+    width: 200px;
+    height: 134px;
+}
+
+.category-tag {
+    background-color: #F2F2F2;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.gap-fix {
+    gap: 100px;
+}
+
+.aside {
+    width: 397px;
+}
+
+
+
+aside h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.aside-category-tag {
+    background-color: #F2F2F2;
+    padding: 13px;
+    border-radius: 20px;
+}
+
+.aside__category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.aside__category-tags a {
+    color: var(--nero);
+    font-size: 0.9rem;
+}
+
+aside>a {
+    color: var(--verde);
+}
+
+aside > a, .aside__category-tags-useful-links{
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.aside__category-tags-useful-links {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    column-gap: 20px;
+
+    margin-top: 20px;
+    border-top: 1px solid #F2F2F2;
+    padding-top: 20px;
+}
+
+.aside__category-tags-useful-links a{
+    color: var(--grigio);
 }
