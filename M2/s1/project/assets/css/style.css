@@ -105,15 +105,73 @@ header {
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .section__trending-articles{
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
-.section__trending-articles img{
+.section__trending-articles img, .article-author img{
     width: 20px;
     aspect-ratio: 1/1;
+    border-radius: 3px;
+}
+
+.article{
+    display: flex;
+    gap: 20px;
+    width: 376px;
+}
+
+.section__trending-article-number{
+    font-size: 2rem;
+    color: #F2F2F2;
+    
+}
+
+.article-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article-author{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: #8A8A8A;
+}
+
+.article-author a{
+    color: var(--nero);
+    font-weight: bold;
+}
+
+.article-title h3{
+    font-weight: bold;
+    line-height: 1.3rem;
+}
+
+.article-date{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #8F8F8F;
+    font-size: 0.8rem;
+    font-weight: 350;
+}
+
+/* section articles list */
+
+.main__articles{
+    padding: 60px 0;
+}
+
+.section__articles-list-article{
+    width: 695px;
 }
