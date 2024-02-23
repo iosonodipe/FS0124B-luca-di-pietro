@@ -64,7 +64,9 @@ header {
     color: white;
     padding: 10px 20px;
     font-weight: 300;
+}
 
+#headerBtn{
     transition: background-color 0.5s;
 }
 
@@ -77,6 +79,9 @@ header {
     /* background-image: url(../imgs/svg/m.svg); */
     padding: 80px 0;
     border-bottom: 1px solid black;
+    background-image: url(../imgs/svg/m.svg);
+    background-repeat: no-repeat;
+    background-position: right;
 
 }
 
