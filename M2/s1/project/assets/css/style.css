@@ -32,6 +32,8 @@ header {
     background-color: var(--giallo);
     padding: 20px 20px;
     border-bottom: 1px solid black;
+
+    transition: background-color 0.5s;
 }
 
 .nav__content {
@@ -62,6 +64,8 @@ header {
     color: white;
     padding: 10px 20px;
     font-weight: 300;
+
+    transition: background-color 0.5s;
 }
 
 /* MAIN */

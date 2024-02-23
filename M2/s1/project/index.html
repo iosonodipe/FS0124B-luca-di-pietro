@@ -32,7 +32,7 @@
                         <a href="">Membership</a>
                         <a href="">Write</a>
                         <a href="">Sign in</a>
-                        <button class="btn-black btn-green">Get started</button>
+                        <button class="btn-black" id="headerBtn">Get started</button>
                     </div>
                 </div>
             </div>
@@ -461,6 +461,22 @@
             </div>
         </section>
     </main>
+
+    <script>
+        let header = document.querySelector('header')
+        let headerBtn = document.querySelector('#headerBtn')
+
+        window.addEventListener('scroll', function () {
+            let scroll = window.scrollY;
+            if (scroll > 400) {
+                header.style.backgroundColor = 'white';
+                headerBtn.style.backgroundColor= '#1a8917';
+            } else {
+                header.style.backgroundColor = '#ffc017'
+                headerBtn.style.backgroundColor= '#191919'
+            }
+        })
+    </script>
 
 </body>
 
