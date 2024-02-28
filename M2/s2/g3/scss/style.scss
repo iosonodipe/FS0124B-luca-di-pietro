@@ -1,0 +1,68 @@
+@import "reset";
+@import "colori";
+@import "fonts";
+@import "bottoni";
+@import "mixins";
+
+.container {
+    // margin: 0 auto;
+    // width: 100%;
+}
+
+.navbar {
+    @include grid(2);
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: $bg-hero;
+}
+
+.navbar img {
+    width: 50px;
+}
+
+.navbar {
+    ul {
+        @include grid(3);
+        justify-content: flex-end;
+        align-items: center;
+        li {
+            @include testoBase;
+            font-size: 0.8rem;
+            margin: 0 10px;
+        }
+    }
+}
+
+.hero {
+    @include grid(2);
+    gap: 10px;
+
+    position: relative;
+    background-color: $bg-hero;
+    padding: 20px 40px;
+    @include testoBase;
+    .hero__text {
+        max-width: 40%;
+        padding-bottom: 60px;
+        h2 {
+            @include testoTitolo;
+        }
+    }
+    img {
+        max-width: 50%;
+        @include floating;
+        right: 40px;
+        top: 20px;
+        // aspect-ratio: 1/1;
+    }
+}
+
+.images{
+    @include grid(4);
+    justify-content: space-evenly;
+    padding: 20px 40px;
+
+    img{
+        width: 300px;
+    }
+}
