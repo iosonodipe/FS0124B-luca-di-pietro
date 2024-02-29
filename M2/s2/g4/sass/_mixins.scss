@@ -1,0 +1,12 @@
+@mixin navbarIcons() {
+    position: relative;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

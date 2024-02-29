@@ -1,0 +1,46 @@
+//override variabili bs
+
+$primary: #7550FE;
+$secondary: #39CB98;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+// *{
+//     font-family: "Inter", sans-serif;
+//     h1, h2, h3, h4, h5, h6{
+//         font-weight: bold;
+//     }
+// }
+
+.navbar-wrap{
+    display: flex;
+}
+
+.navbar-icons-wrap{
+    @include flexCenter;
+    gap: 10px;  
+    padding: 0 10px;
+    .navbar-notifications{
+        @include flexCenter;
+        @include navbarIcons;
+        background-color: $light;
+        span{
+            right: 0;
+            top: 10%;
+        }
+    }
+    .navbar-avatar{
+        @include navbarIcons;
+        background-image: url(../assets/avatar-1.jpg);
+        background-position: center;
+        background-size: contain;
+        span{
+            right: 0;
+            bottom: 10%;
+        }
+    }
+}
