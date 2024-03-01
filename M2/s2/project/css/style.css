@@ -11845,10 +11845,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  color: white;
+}
+
 .navbar-icons-wrap {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.navbar-icons-wrap a:hover {
+  display: none;
 }
 
 .navbar-toggler:focus {
