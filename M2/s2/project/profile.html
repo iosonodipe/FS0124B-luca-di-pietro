@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Netflix - Profile Settings</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg py-4">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="./assets/netflix_logo.png"
+                            width="120px"
+                            alt="netflix_logo"
+                        />
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="container px-sm-5 mt-5 mb-5">
+                    <div class="wrap px-lg-5 mx-lg-5">
+                        <div class="row">
+                            <p class="display-3">Edit Profile</p>
+                        </div>
+                        <hr class="m-0" />
+                        <div class="row">
+                            <div class="col-12 col-sm-3 py-4">
+                                <img
+                                    src="./assets/avatar.png"
+                                    class="img-fluid"
+                                    alt="avatar"
+                                />
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <div class="row row-gap-3 py-4">
+                                    <div class="col-10">
+                                        <input
+                                            type="text"
+                                            placeholder="Username"
+                                            class="form-control fs-4 bg-info text-white rounded-0 border-0"
+                                        />
+                                    </div>
+                                    <div class="col-4">
+                                        <label
+                                            for="language"
+                                            class="fs-4 .text-dark-emphasis"
+                                            >Language:</label
+                                        >
+                                        <select
+                                            name="language"
+                                            class="form-select bg-black border rounded-0 text-white"
+                                            aria-label="Default select example"
+                                        >
+                                            <option selected>English</option>
+                                            <option value="1">Italian</option>
+                                            <option value="2">Spanish</option>
+                                            <option value="3">French</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr class="m-0" />
+                                <div class="row row-gap-3 py-4">
+                                    <div class="col-6">
+                                        <p class="fs-4">Maturity Settings:</p>
+                                        <div
+                                            class="bg-info text-center fw-bold p-2"
+                                        >
+                                            ALL MATURITY RATINGS
+                                        </div>
+                                    </div>
+                                    <p class="m-0">
+                                        Show titles of
+                                        <b>all maturity ratings</b> for this
+                                        profile.
+                                    </p>
+                                    <div class="col-3">
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-info rounded-0 px-4"
+                                        >
+                                            EDIT
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="m-0" />
+                                <div class="row row-gap-3 py-4">
+                                    <div class="col-12">
+                                        <p class="fs-4 mb-0">
+                                            Autoplay controls
+                                        </p>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input rounded-0"
+                                                type="checkbox"
+                                                value=""
+                                                id="defaultCheck1"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="defaultCheck1"
+                                            >
+                                                <small
+                                                    >Autoplay next episode in a
+                                                    series on all
+                                                    devices.</small
+                                                >
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input rounded-0"
+                                                type="checkbox"
+                                                value=""
+                                                id="defaultCheck2"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="defaultCheck1"
+                                            >
+                                                <small
+                                                    >Autoplay previews while
+                                                    browsing on all
+                                                    devices.</small
+                                                >
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="d-flex gap-4 flex-wrap flex-sm-nowrap">
+                            
+                            <button
+                                type="button"
+                                class="btn btn-outline-info rounded-0 px-4 fs-5"
+                            >
+                                SAVE
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-info rounded-0 px-4 fs-5"
+                            >
+                                CANCEL
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-info rounded-0 px-4 fs-5"
+                            >
+                                DELETE PROFILE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -9,7 +9,8 @@ $info: #495057;
 @import 'variables';
 
 body{
-    color: white
+    color: white;
+    background-color: $primary;
 }
 
 .navbar-icons-wrap{
