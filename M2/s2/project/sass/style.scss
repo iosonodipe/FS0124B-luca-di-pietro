@@ -16,11 +16,6 @@ body{
 .navbar-icons-wrap{
     @include flex-center;
     gap: 20px;
-    a{
-        &:hover{
-            display: none;
-        }
-    }
 }
 
 .navbar-toggler:focus{

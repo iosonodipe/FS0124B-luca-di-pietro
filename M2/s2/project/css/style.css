@@ -11855,9 +11855,6 @@ body {
   align-items: center;
   gap: 20px;
 }
-.navbar-icons-wrap a:hover {
-  display: none;
-}
 
 .navbar-toggler:focus {
   box-shadow: none;
