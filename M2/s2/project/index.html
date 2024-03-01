@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Netflix</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body class="bg-primary">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="./assets/netflix_logo.png"
+                            width="150px"
+                            alt="netflix_logo"
+                        />
+                    </a>
+                    <button
+                        class="navbar-toggler border-secondary"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#"
+                                    >TV Shows</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#"
+                                    >Movies</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#"
+                                    >Recently Added</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#"
+                                    >My List</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="navbar-icons-wrap">
+                            <div class="navbar-search">
+                                <i class="bi bi-search text-white fs-5"></i>
+                            </div>
+                            <div class="navbar-kids text-white">KIDS</div>
+                            <div class="navbar-notifications">
+                                <i class="bi bi-bell-fill text-white fs-4"></i>
+                            </div>
+                            <div class="dropdown text-end">
+                                <a
+                                    href="#"
+                                    class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-white"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <img
+                                        src="./assets/avatar.png"
+                                        alt="mdo"
+                                        width="36"
+                                        height="36"
+                                    />
+                                </a>
+                                <ul class="dropdown-menu text-small">
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="profile.html"
+                                            target="_blank"
+                                            >Profile</a
+                                        >
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Sign out</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="show">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-5">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-lg-7">
+                                    <h2 class="text-white display-6 fw-bold">
+                                        TV Shows
+                                    </h2>
+                                </div>
+                                <div class="col-12 col-lg-5">
+                                    <select
+                                        class="form-select bg-black border rounded-0 text-white"
+                                        aria-label="Default select example"
+                                    >
+                                        <option selected>Genres</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-end">
+                                <button class="btn btn-outline-light rounded-0" type="button">
+                                    <i class="bi bi-list"></i>
+                                </button>
+                                <button class="btn btn-outline-light rounded-0" type="button">
+                                    <i class="bi bi-grid-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer></footer>
+
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+$primary: #141414;
+$secondary: #E50914;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/@splidejs/splide/dist/css/splide-core.min.css';
+@import 'mixins';
+@import 'variables';
+
+.navbar-icons-wrap{
+    @include flex-center;
+    gap: 20px;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='red' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");;
+}
