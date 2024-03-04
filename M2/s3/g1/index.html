@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form>
+            <label for="pet-name">Pet name:</label><br />
+            <input type="text" id="pet-name" name="pet-name" /><br /><br />
+            <label for="owner-name">Owner name:</label><br />
+            <input type="text" id="owner-name" name="owner-name" /><br /><br />
+            <label for="species">Choose pet species:</label>
+            <select name="species" id="species">
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Fish">Fish</option>
+                <option value="Rabbit">Rabbit</option></select
+            ><br /><br />
+            <label for="breed">Choose pet breed:</label>
+            <select name="breed" id="breed">
+                <option value="hr">---Dogs---</option>
+                <option value="Labrador">Labrador</option>
+                <option value="Golden">Golden</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="hr">---Cats---</option>
+                <option value="Persian">Persian</option>
+                <option value="Exotic">Exotic</option>
+                <option value="Garfield">Garfield</option>
+                <option value="hr">---Fishes---</option>
+                <option value="Nemo">Nemo</option>
+                <option value="Redfish">Redfish</option>
+                <option value="Cleaner">Cleaner</option>
+                <option value="hr">---Rabbits---</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="American">American</option></select
+            ><br /><br />
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+        <div id="div"></div>
+
+        <script>
+            //esercizio 1
+            {
+                class User {
+                    constructor(nome, cognome, età, residenza) {
+                        this.firstName = nome;
+                        this.lastName = cognome;
+                        this.age = età;
+                        this.location = residenza;
+                    }
+                    confrontaEtà(utente2) {
+                        if (this.age > utente2.age)
+                            console.log(
+                                `${this.firstName} è più vecchio di ${utente2.firstName}`
+                            );
+                        else if (this.age == utente2.age)
+                            console.log("Gli utenti hanno la stessa età");
+                        else
+                            console.log(
+                                `${utente2.firstName} è più vecchio di ${this.firstName}`
+                            );
+                    }
+                }
+
+                let luca = new User(
+                    "Luca",
+                    "Di Pietro",
+                    23,
+                    "Cernusco sul Naviglio"
+                );
+                let mario = new User("Mario", "Rossi", 22, "Gorgonzola");
+
+                luca.confrontaEtà(mario);
+            }
+
+            //esercizio 2
+            {
+                let form = document.querySelector("form");
+                let submit = document.querySelector("#submit");
+                let div = document.querySelector("#div");
+                let newDiv = document.createElement("div");
+                let arrayAnimali = [];
+
+                submit.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let animale = new Pet();
+                    animale.petName = document.querySelector("#pet-name").value;
+                    animale.ownerName = document.querySelector("#owner-name").value;
+                    animale.species = document.querySelector("#species").value;
+                    animale.breed = document.querySelector("#breed").value;
+                    arrayAnimali.push(animale);
+                    let p = document.createElement("p");
+                    p.append(`Pet name: ${animale.petName}`);
+                    p.append(` - Owner name: ${animale.ownerName}`);
+                    p.append(` - Pet species: ${animale.species}`);
+                    p.append(` - Pet breed: ${animale.breed}`);
+                    div.append(p);
+                    form.reset();
+                    if (arrayAnimali.length >= 2) {
+                        animale.verificaPadrone();
+                    }
+                });
+
+                class Pet {
+                    constructor() {
+                        this.petName = "";
+                        this.ownerName = "";
+                        this.species = "";
+                        this.breed = "";
+                    }
+                    verificaPadrone() {
+                        arrayAnimali.forEach(el => function(){
+                            
+                        })
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
