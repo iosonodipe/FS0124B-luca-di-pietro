@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h3 id="target-nome"></h3>
+        <form>
+            <label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" />
+            <button id="save">Save</button>
+            <button id="delete">Delete</button>
+        </form>
+
+        <h1 id="target-timer">1</h1>
+
+        <script>
+            {
+                let saveBtn = document.querySelector("#save");
+                let deleteBtn = document.querySelector("#delete");
+                let h3 = document.querySelector("#target-nome");
+                h3.innerText = localStorage.getItem("nome");
+
+                saveBtn.addEventListener("click", function () {
+                    let inputName = document.querySelector("#fname").value;
+                    localStorage.setItem("nome", `${inputName}`);
+                    h3.innerText = localStorage.getItem("nome");
+                });
+
+                deleteBtn.addEventListener("click", function () {
+                    localStorage.removeItem("nome");
+                    h3.innerText = localStorage.getItem("nome");
+                });
+            }
+
+            {
+                let h1 = document.querySelector("#target-timer");
+                h1.innerText = sessionStorage.getItem("timer");
+                let counter = sessionStorage.getItem("timer");
+                setInterval(function () {
+                    counter++;
+                    sessionStorage.setItem("timer", `${counter}`);
+                    h1.innerText = sessionStorage.getItem("timer");
+                }, 1000);
+            }
+        </script>
+    </body>
+</html>
