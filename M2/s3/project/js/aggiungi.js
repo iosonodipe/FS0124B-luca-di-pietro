@@ -36,7 +36,8 @@ async function addProduct() {
     })
         .then((response) => response.json())
         .then((res) => {
-            alert("Prodotto creato correttamente!");
+            // alert("Prodotto creato correttamente!");
             //da valutare
+            location.href = 'index.html'
         });
 }

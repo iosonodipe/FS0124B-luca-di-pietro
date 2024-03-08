@@ -29,6 +29,6 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${id}`, {
         );
         writeProductInfo("#productBrand", `${prodotto.brand}`);
         writeProductInfo("#productName", `${prodotto.name}`);
-        writeProductInfo("#productPrice", `${prodotto.price}`);
+        writeProductInfo("#productPrice", `${prodotto.price}$`);
         writeProductInfo("#productDesc", `${prodotto.description}`);
     });
