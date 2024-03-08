@@ -7,3 +7,9 @@ export default class Product {
         this.price = _price;
     }
 }
+
+export function getId() {   
+    const url = new URLSearchParams(location.search);
+    const id = url.get("id");
+    return id;
+}

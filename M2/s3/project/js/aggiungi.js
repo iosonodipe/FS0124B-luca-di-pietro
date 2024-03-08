@@ -37,6 +37,6 @@ async function addProduct() {
         .then((response) => response.json())
         .then((res) => {
             alert("Prodotto creato correttamente!");
-            //do conferma all'utente oppure lo mando via
+            //da valutare
         });
 }

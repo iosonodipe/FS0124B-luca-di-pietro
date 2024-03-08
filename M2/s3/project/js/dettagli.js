@@ -1,5 +1,6 @@
-const url = new URLSearchParams(location.search);
-const id = url.get("id");
+import {getId} from "./export.js";
+
+const id = getId();
 
 function writeProductInfo(selettore, info_prodotto, immagine_prodotto = 0) {
     if (!immagine_prodotto == 0) {
