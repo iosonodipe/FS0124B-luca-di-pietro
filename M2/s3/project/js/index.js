@@ -16,6 +16,10 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
 .then(prodotti => {
     prodotti.forEach(prodotto => {
         let card = clone();
+        let cardContent = card.querySelector('.card')
+        cardContent.addEventListener('click', function(){
+            location.href = 'dettagli.html' + `?id=${prodotto._id}`
+        })
         let row = document.querySelector("#product-catalogue");
         let productImage = card.querySelector('.card-img-top');
         productImage.src = `${prodotto.imageUrl}`;

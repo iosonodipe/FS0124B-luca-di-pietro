@@ -1,12 +1,4 @@
-class Product {
-    constructor(_name, _description, _brand, _imageUrl, _price) {
-        this.name = _name;
-        this.description = _description;
-        this.brand = _brand;
-        this.imageUrl = _imageUrl;
-        this.price = _price;
-    }
-}
+import Product from './export.js'
 
 const addBtn = document.querySelector("#addBtn");
 addBtn.addEventListener("click", function (e) {
