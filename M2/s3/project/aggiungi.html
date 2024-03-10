@@ -46,20 +46,6 @@
                                 >
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input
-                                class="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-                            <button
-                                class="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form>
                     </div>
                 </div>
             </nav>
@@ -68,7 +54,7 @@
         <main class="mt-5">
             <div class="container">
                 <h2 class="py-2 border-bottom">Aggiungi prodotto</h2>
-                <form class="mt-5">
+                <form class="mt-5" id="form1">
                     <div class="mb-3">
                         <label for="productName" class="form-label"
                             >Nome prodotto</label
@@ -134,11 +120,14 @@
                     </button>
                     <button
                         id="resetBtn"
-                        type="reset"
+                        type="button"
                         class="btn btn-danger mt-3"
                     >
                         Reset
                     </button>
+                    <div id="productAdded" class="d-none bg-warning-subtle border rounded-3 p-2 mt-4">
+                        Prodotto creato correttamente! Verrai reindirizzato a breve...
+                    </div>
                 </form>
             </div>
         </main>

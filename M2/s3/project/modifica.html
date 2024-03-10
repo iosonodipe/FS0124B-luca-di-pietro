@@ -45,20 +45,6 @@
                                 >
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input
-                                class="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-                            <button
-                                class="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form>
                     </div>
                 </div>
             </nav>
@@ -67,7 +53,7 @@
         <main class="mt-5">
             <div class="container">
                 <h2 class="py-2 border-bottom">Modifica prodotto</h2>
-                <form class="mt-5">
+                <form class="mt-5" id="form1">
                     <div class="mb-3">
                         <label for="productName" class="form-label"
                             >Nome prodotto</label
@@ -122,12 +108,15 @@
                     <button id="editBtn" type="submit" class="btn btn-primary mt-3">
                         Modifica
                     </button>
-                    <button id="resetBtn" type="reset" class="btn btn-warning mt-3">
+                    <button id="resetBtn" type="button" class="btn btn-warning mt-3">
                         Reset
                     </button>
                     <button id="deleteBtn" type="submit" class="btn btn-danger mt-3">
                         Elimina
                     </button>
+                    <div id="productAdded" class="d-none bg-warning-subtle border rounded-3 p-2 mt-4">
+                        Prodotto modificato correttamente! Verrai reindirizzato a breve...
+                    </div>
                 </form>
             </div>
         </main>
