@@ -15,10 +15,10 @@ class User {
         if (check <= this.credito) {
             this.credito -= check;
             this.numeroChiamate += minuti;
-            console.log(`Chiamata effettuata. Nuovo credito dipsponibile utente ${this.nome}: ${this.credito}$`);
+            console.log(`${this.nome} - Chiamata effettuata. Nuovo credito disponibile: ${this.credito}$`);
         }
         else {
-            console.log(`Impossibile effettuare la chiamata. L'importo della chiamata è pari a ${check}$, il credito disponibile dell'utente ${this.nome} è di ${this.credito}$.`);
+            console.log(`${this.nome} - Impossibile effettuare la chiamata. L'importo della chiamata è pari a ${check}$, il credito disponibile è di ${this.credito}$.`);
         }
     }
     chiama404() {
@@ -38,7 +38,9 @@ luca.ricarica(10);
 mario.ricarica(5);
 paolo.ricarica(15);
 luca.chiamata(5);
+luca.chiamata(15);
 mario.chiamata(30);
+mario.chiamata(10);
 paolo.chiamata(50);
 console.log('Luca ha un credito di $' + luca.chiama404());
 console.log('Mario ha un credito di $' + mario.chiama404());

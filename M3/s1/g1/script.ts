@@ -20,11 +20,11 @@ class User implements iCellulare {
             this.credito -= check;
             this.numeroChiamate += minuti;
             console.log(
-                `Chiamata effettuata. Nuovo credito dipsponibile utente ${this.nome}: ${this.credito}$`
+                `${this.nome} - Chiamata effettuata. Nuovo credito disponibile: ${this.credito}$`
             );
         } else {
             console.log(
-                `Impossibile effettuare la chiamata. L'importo della chiamata è pari a ${check}$, il credito disponibile dell'utente ${this.nome} è di ${this.credito}$.`
+                `${this.nome} - Impossibile effettuare la chiamata. L'importo della chiamata è pari a ${check}$, il credito disponibile è di ${this.credito}$.`
             );
         }
     }
@@ -51,7 +51,9 @@ mario.ricarica(5);
 paolo.ricarica(15);
 
 luca.chiamata(5);
+luca.chiamata(15);
 mario.chiamata(30);
+mario.chiamata(10);
 paolo.chiamata(50);
 
 console.log('Luca ha un credito di $' + luca.chiama404());
