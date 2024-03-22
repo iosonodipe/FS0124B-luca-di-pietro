@@ -1,1 +1,31 @@
-<p>audi works!</p>
+<div class="row align-items-center mb-3">
+  <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+    <img [src]="brandCarsArray[0].brandLogo" width="150" />
+  </div>
+  <div class="col-12 col-sm-8 col-md-9 col-lg-10">
+    <h2>Automobili {{ brandCarsArray[0].brand }}</h2>
+  </div>
+</div>
+
+<div class="cars">
+  <div class="row g-3">
+    <div class="col-12 col-sm-6" *ngFor="let car of brandCarsArray">
+      <div
+        class="card"
+        [ngClass]="{ 'bg-success': car.available, 'bg-danger': !car.available }"
+      >
+        <img [src]="car.modelImage" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+          <p class="card-text">Anno: {{ car.year }}</p>
+          <p class="card-text">Prezzo: {{ car.price }}$</p>
+          <p class="card-text" *ngIf="car.available">Disponibità: SI</p>
+          <p class="card-text" *ngIf="!car.available">Disponibità: NO</p>
+          <button class="btn btn-primary" [routerLink]="['/cars', car.id]">
+            Dettaglio
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="title bg-info text-center p-3 mb-3">
+  <img src="https://www.pngall.com/wp-content/uploads/13/Car-Logo-PNG-Pic.png" width="200" alt="logo">
+  <h2 class="text-white">Il tuo autosalone di fiducia</h2>
+</div>
+
+<div class="brands text-center">
+  <h4>I nostri marchi:</h4>
+  <div class="row align-items-center">
+    <div class="col-12 col-sm-4" *ngFor="let brand of brandsArray">
+      <img [src]="brand" width="150">
+    </div>
+  </div>
+  <hr>
+</div>
+
+<div class="cars">
+  <div class="row g-3">
+    <div class="col-12 col-sm-6" *ngFor="let car of randomCars">
+      <div class="card" [ngClass]="{'bg-success': car.available, 'bg-danger': !car.available}">
+        <img [src]="car.modelImage" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{car.brand}} {{car.model}}</h5>
+          <p class="card-text">Anno: {{car.year}}</p>
+          <p class="card-text">Prezzo: {{car.price}}$</p>
+          <p class="card-text" *ngIf="car.available">Disponibità: SI</p>
+          <p class="card-text" *ngIf="!car.available">Disponibità: NO</p>
+          <button
+          class="btn btn-primary"
+          [routerLink]="['/cars',car.id]"
+          >Dettaglio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h2>{{carDetail?.brand}} {{carDetail?.model}}</h2>
+<div class="row">
+  <div class="col-12 col-sm-5 col-md-4 col-lg-3">
+    <img [src]="carDetail?.modelImage" alt="">
+  </div>
+  <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+    <p>Prezzo: {{carDetail?.price}}$</p>
+    <p>Anno: {{carDetail?.year}}$</p>
+    <p *ngIf="carDetail?.available">Disponibilità: SI</p>
+    <p *ngIf="!carDetail?.available">Disponibilità: NO</p>
+  </div>
+</div>

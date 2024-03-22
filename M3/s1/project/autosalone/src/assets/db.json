@@ -2,7 +2,7 @@
   {
     "id": 1,
     "brand": "Fiat",
-    "brandLogo": "https://picsum.photos/100/100?random=7",
+    "brandLogo": "../../../assets/loghi/fiat.png",
     "model": "500L",
     "modelImage": "https://picsum.photos/200/300?random=1",
     "year": 2015,
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "brand": "Fiat",
-    "brandLogo": "https://picsum.photos/100/100?random=7",
+    "brandLogo": "../../../assets/loghi/fiat.png",
     "model": "500 Abarth",
     "modelImage": "https://picsum.photos/200/300?random=2",
     "year": 2010,
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "brand": "Ford",
-    "brandLogo": "https://picsum.photos/100/100?random=8",
+    "brandLogo": "../../../assets/loghi/ford.png",
     "model": "Taurus",
     "modelImage": "https://picsum.photos/200/300?random=3",
     "year": 2009,
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "brand": "Ford",
-    "brandLogo": "https://picsum.photos/100/100?random=8",
+    "brandLogo": "../../../assets/loghi/ford.png",
     "model": "Focus",
     "modelImage": "https://picsum.photos/200/300?random=4",
     "year": 2014,
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "brand": "Audi",
-    "brandLogo": "https://picsum.photos/100/100?random=9",
+    "brandLogo": "../../../assets/loghi/audi.png",
     "model": "A3",
     "modelImage": "https://picsum.photos/200/300?random=5",
     "year": 2012,
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "brand": "Audi",
-    "brandLogo": "https://picsum.photos/100/100?random=9",
+    "brandLogo": "../../../assets/loghi/audi.png",
     "model": "Q7",
     "modelImage": "https://picsum.photos/200/300?random=6",
     "year": 2020,

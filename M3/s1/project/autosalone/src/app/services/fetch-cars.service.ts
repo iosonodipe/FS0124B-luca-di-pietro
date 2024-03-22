@@ -12,10 +12,33 @@ export class FetchCarsService {
     .then((cars: iCar[]) => cars)
   }
 
-  getAllBrands():Promise<iCar[]>{
+  getAllBrandsImages():Promise<string[]>{
     return this.getAllCars()
-    .then(cars => cars.filter(car => car.brand))
+    .then(cars => {
+      let brandsArray: string[] = []
+      cars.forEach((el) => {
+        if (!brandsArray.includes(el.brandLogo))
+          brandsArray.push(el.brandLogo);
+      });
+      return brandsArray
+    })
   }
 
+  getBrandCars(brand: string):Promise<iCar[]>{
+    return this.getAllCars()
+    .then(cars => {
+      let brandCarsArray: iCar[] = []
+      cars.forEach((el) => {
+        if (el.brand == brand)
+          brandCarsArray.push(el);
+      });
+      return brandCarsArray
+    })
+  }
+
+  getCarById(id:number):Promise<iCar | undefined>{
+    return this.getAllCars()
+    .then(cars => cars.find(car => car.id == id))
+  }
 }
 
