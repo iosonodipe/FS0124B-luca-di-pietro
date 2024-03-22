@@ -7,12 +7,15 @@
   </div>
 </div>
 
-<div class="cars">
+<div class="cars my-5">
   <div class="row g-3">
     <div class="col-12 col-sm-6" *ngFor="let car of brandCarsArray">
       <div
-        class="card"
-        [ngClass]="{ 'bg-success': car.available, 'bg-danger': !car.available }"
+        class="card border-3"
+        [ngClass]="{
+          'border-success': car.available,
+          'border-danger': !car.available
+        }"
       >
         <img [src]="car.modelImage" class="card-img-top" />
         <div class="card-body">

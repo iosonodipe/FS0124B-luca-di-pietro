@@ -1,10 +1,11 @@
-<div class="title bg-info text-center p-3 mb-3">
+<div class="title text-center p-3 my-5 bg-info bg-opacity-10 border border-info rounded">
   <img src="https://www.pngall.com/wp-content/uploads/13/Car-Logo-PNG-Pic.png" width="200" alt="logo">
-  <h2 class="text-white">Il tuo autosalone di fiducia</h2>
+  <h2 class="text-primary">Il tuo autosalone di fiducia</h2>
 </div>
 
 <div class="brands text-center">
-  <h4>I nostri marchi:</h4>
+  <h2 class="text-primary">I nostri marchi:</h2>
+  <hr>
   <div class="row align-items-center">
     <div class="col-12 col-sm-4" *ngFor="let brand of brandsArray">
       <img [src]="brand" width="150">
@@ -14,9 +15,9 @@
 </div>
 
 <div class="cars">
-  <div class="row g-3">
+  <div class="row g-3 my-5">
     <div class="col-12 col-sm-6" *ngFor="let car of randomCars">
-      <div class="card" [ngClass]="{'bg-success': car.available, 'bg-danger': !car.available}">
+      <div class="card border-3" [ngClass]="{'border-success': car.available, 'border-danger': !car.available}">
         <img [src]="car.modelImage" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">{{car.brand}} {{car.model}}</h5>
