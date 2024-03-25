@@ -1,19 +1,9 @@
-<h1 class="mb-3">Post principale</h1>
-<div class="card" *ngIf="postsCollection.length > 0">
-  <h5 class="card-header">{{ postsCollection[getRandom()].title }}</h5>
+<h1 class="mb-3">Tutti i post</h1>
+<div class="card mb-3" *ngFor="let post of postsCollection" [ngClass]="{'border-2 border-success' : post.active}">
+  <h5 class="card-header">{{ post.title }}</h5>
   <div class="card-body">
-    <p class="card-text">{{ postsCollection[random].body }}</p>
+    <p class="card-text">{{ post.body }}</p>
   </div>
-</div>
-
-<h1 class="mb-3 mt-5">Post che potrebbero piacerti</h1>
-<div class="row g-3">
-  <div *ngFor="let post of randomPostsCollection" class="col-3">
-    <div class="card h-100">
-      <h5 class="card-header">{{ post.title }}</h5>
-      <div class="card-body">
-        <p class="card-text">{{ post.body }}</p>
-      </div>
-    </div>
-  </div>
+  <button class="btn btn-secondary" (click)="show = !show">Modifica</button>
+  <app-form (postEdit)="editPost($event)"></app-form>
 </div>
