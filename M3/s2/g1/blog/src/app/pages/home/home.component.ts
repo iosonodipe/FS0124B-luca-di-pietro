@@ -15,11 +15,8 @@ export class HomeComponent {
   constructor(private postsFetch: PostFetchService){}
 
   ngOnInit() {
-    this.postsFetch.getAllPosts()
-      .then((post) => {
-        this.postsCollection = post;
+        this.postsCollection = this.postsFetch.getAllPosts();
         this.get4Posts();
-      });
   }
 
   getRandom(): number {

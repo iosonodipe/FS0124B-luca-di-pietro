@@ -12,7 +12,6 @@ export class ActivePostsComponent {
   constructor(private fetchPosts: PostFetchService){}
 
   ngOnInit(){
-    this.fetchPosts.getActivePosts()
-    .then(post => this.activePostsCollection = post)
+    this.activePostsCollection = this.fetchPosts.getActivePosts()
   }
 }

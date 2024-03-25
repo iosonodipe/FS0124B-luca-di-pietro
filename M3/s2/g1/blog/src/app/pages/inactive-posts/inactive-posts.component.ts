@@ -12,7 +12,6 @@ export class InactivePostsComponent {
   constructor(private fetchPosts: PostFetchService){}
 
   ngOnInit(){
-    this.fetchPosts.getInactivePosts()
-    .then(post => this.inactivePostsCollection = post)
+    this.inactivePostsCollection = this.fetchPosts.getInactivePosts()
   }
 }
