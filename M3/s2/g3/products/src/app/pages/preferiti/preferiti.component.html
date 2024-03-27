@@ -1,1 +1,6 @@
-<p>preferiti works!</p>
+<div class="row g-3">
+  <div class="col-4" *ngFor="let fav of favProducts">
+    <app-card [product]="fav"></app-card>
+  </div>
+</div>
+
