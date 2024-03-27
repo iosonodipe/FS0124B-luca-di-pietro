@@ -4,6 +4,6 @@
     <h5 class="card-title">{{product.title}}</h5>
     <p class="card-text">{{product.description}}</p>
     <p class="card-text">Prezzo: {{product.price}}$</p>
-    <a class="btn btn-primary" (click)="pushFavourite(product)">Aggiungi a preferiti</a>
+    <a class="btn btn-primary" *ngIf="url != '/preferiti'" (click)="pushFavourite(product)">Aggiungi a preferiti</a>
   </div>
 </div>
