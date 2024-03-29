@@ -1,0 +1,5 @@
+<div class="alert text-start" [ngClass]="{'alert-success' : todo.completed, 'alert-danger' : !todo.completed}">
+  <input *ngIf="todo.completed" type="checkbox" checked [id]="todo.id">
+  <input *ngIf="!todo.completed" type="checkbox" [id]="todo.id">
+  <span class="fw-bold"> {{todo.todo}}</span>
+</div>
