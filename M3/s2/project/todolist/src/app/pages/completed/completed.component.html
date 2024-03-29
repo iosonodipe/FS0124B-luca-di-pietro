@@ -1,1 +1,4 @@
-<p>completed works!</p>
+<h2 class="mb-5">Task Completate</h2>
+<div *ngFor="let todo of completedTodosArray">
+  <app-task [todo]="todo"></app-task>
+</div>

@@ -1,4 +1,4 @@
 <div class="alert text-start" [ngClass]="{'alert-success' : todo.completed, 'alert-danger' : !todo.completed}">
   <input type="checkbox" [(ngModel)]="todo.completed" (change)="updateComplete(todo)" [id]="todo.id">
-  <span class="fw-bold"> {{todo.todo}}</span>
+  <span class="fw-bold"> {{todo.todo}}</span><span class="fw-light"> - assigned to: {{getUser(todo.userId)?.firstName}} {{getUser(todo.userId)?.lastName}}</span>
 </div>

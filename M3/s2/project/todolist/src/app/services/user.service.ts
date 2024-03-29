@@ -810,7 +810,12 @@ export class UserService {
       }
   ]
   usersArray = new BehaviorSubject<iUser[]>(this.staticUsersArray);
-  $getTodosArray = this.usersArray.asObservable()
+  $getUsersArray = this.usersArray.asObservable()
 
   constructor() { }
+
+  getUserById(todoUserId: number):iUser | null{
+    let user = this.staticUsersArray.find(user => user.id == todoUserId)
+    return user ? user : null
+  }
 }

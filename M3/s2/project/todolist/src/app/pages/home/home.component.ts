@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { iTodo } from '../../models/itodo';
+import { iUser } from '../../models/iuser';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +12,11 @@ import { iTodo } from '../../models/itodo';
 export class HomeComponent {
 
   todosArray: iTodo[] = [];
+  usersArray: iUser[] = [];
 
-  constructor(private todoSvc: TodoService) {
+  constructor(private todoSvc: TodoService, private userSvc: UserService) {
     this.todoSvc.$getTodosArray.subscribe((todos) => (this.todosArray = todos));
+    this.userSvc.$getUsersArray.subscribe((users) => (this.usersArray = users));
   }
 
 }
