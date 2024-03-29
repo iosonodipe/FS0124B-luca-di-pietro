@@ -10,6 +10,7 @@ import { TaskComponent } from './components/task/task.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UncompletedComponent } from './pages/uncompleted/uncompleted.component';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UncompletedComponent } from './pages/uncompleted/uncompleted.component'
     UsersComponent,
     TaskComponent,
     NavbarComponent,
-    UncompletedComponent
+    UncompletedComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
