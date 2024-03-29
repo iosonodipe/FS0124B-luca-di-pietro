@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class TodoService {
-  todosArray = new BehaviorSubject<iTodo[]>([
+  staticTodosArray = [
     {
       id: 1,
       todo: 'Do something nice for someone I care about',
@@ -907,10 +907,17 @@ export class TodoService {
       completed: false,
       userId: 32,
     },
-  ]);
-  $getTodosArray = this.todosArray.asObservable();
+  ]
+  todosArray = new BehaviorSubject<iTodo[]>(this.staticTodosArray);
+  $getTodosArray = this.todosArray.asObservable()
 
-  constructor() {}
+  constructor() {
+  }
 
+  updateTodos(todo: iTodo):void{
+    let i = this.staticTodosArray.findIndex(el => el.id == todo.id )
+    this.staticTodosArray.splice(i, 1, todo)
+    this.todosArray.next(this.staticTodosArray)
+  }
 
 }

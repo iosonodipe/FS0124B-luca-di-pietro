@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { CompletedComponent } from './pages/completed/completed.component';
 import { UsersComponent } from './pages/users/users.component';
 import { TaskComponent } from './components/task/task.component';
+import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { TaskComponent } from './components/task/task.component';
     HomeComponent,
     CompletedComponent,
     UsersComponent,
-    TaskComponent
+    TaskComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

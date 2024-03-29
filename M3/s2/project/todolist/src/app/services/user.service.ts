@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { iUser } from '../models/iuser';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  usersArray: iUser[] = [
+  staticUsersArray: iUser[] = [
       {
         "id":1,
         "firstName":"Terry",
@@ -808,6 +809,8 @@ export class UserService {
         "title":"VP Sales"
       }
   ]
+  usersArray = new BehaviorSubject<iUser[]>(this.staticUsersArray);
+  $getTodosArray = this.usersArray.asObservable()
 
   constructor() { }
 }
