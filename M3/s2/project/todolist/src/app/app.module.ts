@@ -9,6 +9,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { TaskComponent } from './components/task/task.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { UncompletedComponent } from './pages/uncompleted/uncompleted.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CompletedComponent,
     UsersComponent,
     TaskComponent,
-    NavbarComponent
+    NavbarComponent,
+    UncompletedComponent
   ],
   imports: [
     BrowserModule,
