@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  #details {
+    border-top: 1px solid gainsboro;
+  }
+}
+
+@media (min-width: 768px) {
+  #details {
+    border-left: 1px solid gainsboro;
+  }
+}

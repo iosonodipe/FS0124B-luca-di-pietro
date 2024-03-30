@@ -1,1 +1,13 @@
-<p>user-detail works!</p>
+<div class="row mb-4 border">
+  <div class="col-12 col-md-5 col-lg-4 align-content-center">
+    <img [src]="user.image" alt="user_img" />
+  </div>
+  <div id="details" class="col-12 col-md-7 col-lg-8 text-start py-3">
+    <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+    <p class="fst-italic">{{ user.title }}</p>
+    <div *ngFor="let todo of userTodosArray">
+      <app-task *ngIf="user" [todo]="todo"></app-task>
+    </div>
+    <p class="fs-5 fst-italic" *ngIf="userTodosArray.length == 0">Nessuna task assegnata a questo utente</p>
+  </div>
+</div>
