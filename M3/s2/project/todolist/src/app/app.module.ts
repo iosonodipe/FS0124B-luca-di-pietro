@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UncompletedComponent } from './pages/uncompleted/uncompleted.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
     TaskComponent,
     NavbarComponent,
     UncompletedComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

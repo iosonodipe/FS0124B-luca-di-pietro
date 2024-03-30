@@ -13,10 +13,15 @@ export class HomeComponent {
 
   todosArray: iTodo[] = [];
   usersArray: iUser[] = [];
+  searchedUser: string = ''
 
   constructor(private todoSvc: TodoService, private userSvc: UserService) {
     this.todoSvc.$getTodosArray.subscribe((todos) => (this.todosArray = todos));
     this.userSvc.$getUsersArray.subscribe((users) => (this.usersArray = users));
+  }
+
+  onSearchedUserEntered(searchedUser: string){
+    this.searchedUser = searchedUser
   }
 
 }
