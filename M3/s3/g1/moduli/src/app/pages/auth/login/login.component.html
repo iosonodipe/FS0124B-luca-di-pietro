@@ -1,0 +1,14 @@
+  <h1 class="h3 mb-3 fw-normal">Accedi per poter visualizzare la Pagina 2</h1>
+
+  <div class="form-floating">
+    <input #email type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Email</label>
+  </div>
+  <div class="form-floating mt-2">
+    <input #password type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Password</label>
+  </div>
+  <div *ngIf="filledInputs" class="alert alert-warning mt-2">
+    Compila sia mail che password per accedere!
+  </div>
+  <button class="btn btn-primary w-100 py-2 mt-3" (click)="logIn()">Accedi</button>
