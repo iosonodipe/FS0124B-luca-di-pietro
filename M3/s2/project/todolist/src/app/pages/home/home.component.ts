@@ -22,6 +22,8 @@ export class HomeComponent {
 
   onSearchedUserEntered(searchedUser: string){
     this.searchedUser = searchedUser
+    console.log(searchedUser);
+
   }
 
 }
