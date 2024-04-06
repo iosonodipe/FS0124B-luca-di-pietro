@@ -1,79 +1,20 @@
 {
-  "users": [],
-  "movies-popular": [
-    [
-      {
-          "id": 1,
-          "title": "Inception",
-          "year": 2010,
-          "genre": "Sci-Fi, Action",
-          "image": "https://picsum.photos/id/1/200/300"
-      },
-      {
-          "id": 2,
-          "title": "The Godfather",
-          "year": 1972,
-          "genre": "Crime, Drama",
-          "image": "https://picsum.photos/id/2/200/300"
-      },
-      {
-          "id": 3,
-          "title": "The Dark Knight",
-          "year": 2008,
-          "genre": "Action, Crime, Drama",
-          "image": "https://picsum.photos/id/3/200/300"
-      },
-      {
-          "id": 4,
-          "title": "Pulp Fiction",
-          "year": 1994,
-          "genre": "Crime, Drama",
-          "image": "https://picsum.photos/id/4/200/300"
-      },
-      {
-          "id": 5,
-          "title": "The Shawshank Redemption",
-          "year": 1994,
-          "genre": "Drama",
-          "image": "https://picsum.photos/id/5/200/300"
-      },
-      {
-          "id": 6,
-          "title": "Forrest Gump",
-          "year": 1994,
-          "genre": "Drama, Romance",
-          "image": "https://picsum.photos/id/6/200/300"
-      },
-      {
-          "id": 7,
-          "title": "Interstellar",
-          "year": 2014,
-          "genre": "Adventure, Drama, Sci-Fi",
-          "image": "https://picsum.photos/id/7/200/300"
-      },
-      {
-          "id": 8,
-          "title": "The Matrix",
-          "year": 1999,
-          "genre": "Action, Sci-Fi",
-          "image": "https://picsum.photos/id/8/200/300"
-      },
-      {
-          "id": 9,
-          "title": "Fight Club",
-          "year": 1999,
-          "genre": "Drama",
-          "image": "https://picsum.photos/id/9/200/300"
-      },
-      {
-          "id": 10,
-          "title": "The Lord of the Rings: The Fellowship of the Ring",
-          "year": 2001,
-          "genre": "Action, Adventure, Drama",
-          "image": "https://picsum.photos/id/10/200/300"
-      }
-  ]
-
+  "users": [
+    {
+      "email": "luca@mail.it",
+      "password": "$2a$10$wotCVkp/4HgDUq5bNNjUNOllhuNy3DFtLzdCNt5RYPY..OZKozmjq",
+      "firstName": "Luca",
+      "lastName": "Di Pietro",
+      "id": 1
+    },
+    {
+      "email": "franz@mail.it",
+      "password": "$2a$10$sxKH058Pxb0bsBSZkMdDeuCPSOxRDHueCXZCg5TBGW2/GyE7imS5C",
+      "firstName": "Franz",
+      "lastName": "Natavio",
+      "id": 2
+    }
   ],
+  "movies-popular": [],
   "favorites": []
 }

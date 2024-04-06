@@ -4,21 +4,21 @@
 
   <input type="text" name="firstName"
   [(ngModel)]="registerData.firstName"
-  class="form-control" placeholder="nome">
+  class="form-control mb-1" placeholder="Nome">
 
   <input type="text" name="lastName"
   [(ngModel)]="registerData.lastName"
-  class="form-control" placeholder="cognome">
+  class="form-control mb-1" placeholder="Cognome">
 
   <input type="email" name="email"
   [(ngModel)]="registerData.email"
-  class="form-control" placeholder="email">
+  class="form-control mb-1" placeholder="Email">
 
   <input type="password" name="password"
   [(ngModel)]="registerData.password"
-  class="form-control" placeholder="password">
+  class="form-control" placeholder="Password">
 
-  <button (click)="signUp()" class="btn btn-success">Registrati</button>
+  <button (click)="signUp()" class="btn btn-success mt-3">Registrati</button>
 
 </form>
 

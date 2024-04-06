@@ -18,10 +18,10 @@ type AccessData = {
 export class AuthService {
 
   constructor(
-    private http:HttpClient,//per le chiamate http
-    private router:Router//per i redirect
+    private http:HttpClient,
+    private router:Router
     ) {
-      this.restoreUser()//come prima cosa controllo se è già attiva una sessione, e la ripristino
+      this.restoreUser()
     }
 
   jwtHelper:JwtHelperService = new JwtHelperService()
@@ -58,7 +58,7 @@ export class AuthService {
     this.authSubject.next(null)//comunico al subject che l'utente si è sloggato
     localStorage.removeItem('accessData')//cancello i dati dell'utente
 
-    this.router.navigate(['/auth/login'])//mando via l'utente loggato
+    this.router.navigate(['login'])//mando via l'utente loggato
 
   }
 
