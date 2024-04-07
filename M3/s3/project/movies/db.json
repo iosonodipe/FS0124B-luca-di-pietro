@@ -157,11 +157,11 @@
       "image": "https://picsum.photos/200/300?random=19"
     },
     {
-      "id": 20,
-      "title": "The Avengers",
+      "image": "https://picsum.photos/200/300",
+      "title": "Iron Man",
       "year": 2012,
-      "genre": "Action",
-      "image": "https://picsum.photos/200/300?random=20"
+      "genre": "Azione",
+      "id": 20
     }
   ],
   "favorites": []

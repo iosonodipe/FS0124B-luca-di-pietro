@@ -20,4 +20,8 @@
 
   <button class="btn btn-success mt-3" (click)="addMovie()">Aggiungi</button>
 
+  <div *ngIf="isAdded" class="alert alert-success mt-3" role="alert">
+    Film aggiunto con successo! Verrai reindirizzato a breve...
+  </div>
+
 </form>
