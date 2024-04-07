@@ -1,0 +1,23 @@
+<h1 class="text-center">Aggiungi un film</h1>
+
+<form class="mt-5">
+
+  <input type="text" name="title"
+  [(ngModel)]="film.title"
+  class="form-control mb-1" placeholder="Titolo">
+
+  <input type="number" name="year"
+  [(ngModel)]="film.year"
+  class="form-control mb-1" placeholder="Anno">
+
+  <input type="url" name="image"
+  [(ngModel)]="film.image"
+  class="form-control mb-1" placeholder="Immagine">
+
+  <input type="text" name="genre"
+  [(ngModel)]="film.genre"
+  class="form-control" placeholder="Genere">
+
+  <button class="btn btn-success mt-3" (click)="addMovie()">Aggiungi</button>
+
+</form>

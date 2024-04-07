@@ -34,6 +34,13 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
   },
+  {
+    path: 'add-film',
+    loadChildren: () =>
+      import('./pages/add-film/add-film.module').then((m) => m.AddFilmModule),
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+  },
 ];
 
 @NgModule({

@@ -33,7 +33,14 @@ export class FilmListService {
     );
   }
 
-  // addMovie(): Observable<IFilm>{
-
-  // }
+  addMovie(film: Partial<IFilm>): Observable<IFilm>{
+    return this.http.post<IFilm>(this.apiUrl, film)
+    .pipe(
+      tap(() =>
+        this.getAll().subscribe((films) => {
+          this.filmsSubj.next(films);
+        })
+      )
+    );
+  }
 }
