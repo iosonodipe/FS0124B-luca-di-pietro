@@ -41,50 +41,29 @@
       "firstName": "Andrea",
       "lastName": "Petruzzo",
       "id": 6
+    },
+    {
+      "email": "fred@mail.it",
+      "password": "$2a$10$6tvJBCu8nL0mD5zPa0YtZ.O3hrosZB0jjPq.aE1TeXKx.XBSsYe2O",
+      "firstName": "Fred",
+      "lastName": "Pecoraro",
+      "id": 7
+    },
+    {
+      "email": "sara@mail.it",
+      "password": "$2a$10$4GXZiceKNiFrEuo1yIktKOBJcG07onRxA184owLl6HwJjlg.Zyxze",
+      "firstName": "Sara",
+      "lastName": "Porricino",
+      "id": 8
     }
   ],
   "movies-popular": [
-    {
-      "id": 1,
-      "title": "Inception",
-      "year": 2010,
-      "genre": "Science Fiction",
-      "image": "https://picsum.photos/200/300?random=1"
-    },
-    {
-      "id": 2,
-      "title": "The Godfather",
-      "year": 1972,
-      "genre": "Crime",
-      "image": "https://picsum.photos/200/300?random=2"
-    },
-    {
-      "id": 3,
-      "title": "The Shawshank Redemption",
-      "year": 1994,
-      "genre": "Drama",
-      "image": "https://picsum.photos/200/300?random=3"
-    },
-    {
-      "id": 4,
-      "title": "Pulp Fiction",
-      "year": 1994,
-      "genre": "Crime",
-      "image": "https://picsum.photos/200/300?random=4"
-    },
     {
       "id": 5,
       "title": "The Dark Knight",
       "year": 2008,
       "genre": "Action",
       "image": "https://picsum.photos/200/300?random=5"
-    },
-    {
-      "id": 6,
-      "title": "Forrest Gump",
-      "year": 1994,
-      "genre": "Drama",
-      "image": "https://picsum.photos/200/300?random=6"
     },
     {
       "id": 7,

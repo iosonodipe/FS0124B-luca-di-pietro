@@ -7,6 +7,7 @@ import { IUser } from '../../models/i-user';
 import { environment } from '../../../environments/environment.development';
 import { ILogin } from '../../models/i-login';
 import { ProfileService } from '../profile/profile.service';
+import { UsersService } from '../users/users.service';
 
 type AccessData = {
   accessToken:string,
@@ -21,7 +22,8 @@ export class AuthService {
   constructor(
     private http:HttpClient,
     private router:Router,
-    private profileSvc: ProfileService
+    private profileSvc: ProfileService,
+    private usersSvc: UsersService
     ) {
       this.restoreUser()
     }
@@ -39,6 +41,9 @@ export class AuthService {
 
   register(newUser:Partial<IUser>):Observable<AccessData>{
     return this.http.post<AccessData>(this.registerUrl,newUser)
+    .pipe(tap(()=> {
+      this.usersSvc.getAll().subscribe(users => this.usersSvc.usersSubj.next(users))
+    }))
   }
 
   login(loginData:ILogin):Observable<AccessData>{

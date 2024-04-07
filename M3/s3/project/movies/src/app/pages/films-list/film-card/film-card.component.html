@@ -4,6 +4,6 @@
     <h5 class="card-title text-truncate">{{film.title}}</h5>
     <p class="card-text">Genere: {{film.genre}}</p>
     <p class="card-text">Uscita: {{film.year}}</p>
-    <button class="btn btn-danger">&hearts;</button>
+    <button class="btn btn-danger" (click)="deleteMovie(film.id)">X</button>
   </div>
 </div>
