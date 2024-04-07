@@ -13,6 +13,34 @@
       "firstName": "Franz",
       "lastName": "Natavio",
       "id": 2
+    },
+    {
+      "email": "rosa@mail.it",
+      "password": "$2a$10$H3One.VdNcWkWHpujh3HheseMy1X4Y.w98FLE16wOUlX3s.9Y.DVO",
+      "firstName": "Rosa",
+      "lastName": "Sorpreso",
+      "id": 3
+    },
+    {
+      "email": "dario@mail.it",
+      "password": "$2a$10$dvILB6I/BPxDydEBanAMvO6OPnf/c84Xc0YghpltG5z27r.m4t12a",
+      "firstName": "Dario",
+      "lastName": "Cantini",
+      "id": 4
+    },
+    {
+      "email": "cristiano@mail.it",
+      "password": "$2a$10$jLTc4QCpJyDWmI9XcDXlE.D7haXDSbgoc1vqR.3ME6yolbchUmBqK",
+      "firstName": "Cristiano",
+      "lastName": "Turri",
+      "id": 5
+    },
+    {
+      "email": "andrea@mail.it",
+      "password": "$2a$10$Nl2DxFqeLDgdMmPwuq7u1uR0eym.3drq/Sgwrnt2khlQUk25NCJKC",
+      "firstName": "Andrea",
+      "lastName": "Petruzzo",
+      "id": 6
     }
   ],
   "movies-popular": [

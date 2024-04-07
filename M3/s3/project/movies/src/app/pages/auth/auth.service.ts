@@ -6,6 +6,7 @@ import { BehaviorSubject, map, tap, Observable } from 'rxjs';
 import { IUser } from '../../models/i-user';
 import { environment } from '../../../environments/environment.development';
 import { ILogin } from '../../models/i-login';
+import { ProfileService } from '../profile/profile.service';
 
 type AccessData = {
   accessToken:string,
@@ -19,20 +20,19 @@ export class AuthService {
 
   constructor(
     private http:HttpClient,
-    private router:Router
+    private router:Router,
+    private profileSvc: ProfileService
     ) {
       this.restoreUser()
     }
 
   jwtHelper:JwtHelperService = new JwtHelperService()
-  authSubject = new BehaviorSubject<IUser|null>(null);//se nel behavioursubject c'è null significa che l'utente non è loggato, altrimenti conterrà l'oggetto user con tutte le sue info
-  user$ = this.authSubject.asObservable()//contiene i dati dell'utente loggato oppure null
+  authSubject = new BehaviorSubject<IUser|null>(null);
+  user$ = this.authSubject.asObservable()
   isLoggedIn$ = this.user$.pipe(
     map(user => !!user),
     tap(user =>  this.syncIsLoggedIn = user)
-    )//restituisce true se lò'utente è loggato, false se non lo è
-  //!!user è come scrivere Boolean(user)
-  //isLoggedIn$ = this.user$.pipe(map(user => Boolean(user)))
+    )
   syncIsLoggedIn:boolean = false;
   registerUrl:string = environment.registerUrl
   loginUrl:string = environment.loginUrl
@@ -45,9 +45,9 @@ export class AuthService {
     return this.http.post<AccessData>(this.loginUrl,loginData)
     .pipe(tap(data => {
 
-      this.authSubject.next(data.user)//comunico al subject che l'utente si è loggato
+      this.authSubject.next(data.user)
       localStorage.setItem('accessData', JSON.stringify(data))
-
+      this.profileSvc.userSubj.next(data.user)//aggiorno i dati utente per aggiornare la pagina profilo
       this.autoLogout(data.accessToken)
 
     }))
@@ -55,10 +55,9 @@ export class AuthService {
 
   logout(){
 
-    this.authSubject.next(null)//comunico al subject che l'utente si è sloggato
-    localStorage.removeItem('accessData')//cancello i dati dell'utente
-
-    this.router.navigate(['login'])//mando via l'utente loggato
+    this.authSubject.next(null)
+    localStorage.removeItem('accessData')
+    this.router.navigate(['login'])
 
   }
 
