@@ -52,7 +52,7 @@ export class AuthService {
 
       this.authSubject.next(data.user)
       localStorage.setItem('accessData', JSON.stringify(data))
-      this.profileSvc.userSubj.next(data.user)//aggiorno i dati utente per aggiornare la pagina profilo
+      this.profileSvc.userSubj.next(data.user)
       this.autoLogout(data.accessToken)
 
     }))
@@ -67,20 +67,20 @@ export class AuthService {
   }
 
   getAccessToken():string{
-    const userJson = localStorage.getItem('accessData')//recupero io dati di accesso
-    if(!userJson) return ''; //se l'utente non si è mai loggato blocca tutto
+    const userJson = localStorage.getItem('accessData')
+    if(!userJson) return '';
 
-    const accessData:AccessData = JSON.parse(userJson)//se viene eseguita questa riga significa che i dati ci sono, quindi la converto da json ad oggetto per permetterne la manipolazione
-    if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return ''; //ora controllo se il token è scaduto, se lo è fermiamo la funzione
+    const accessData:AccessData = JSON.parse(userJson)
+    if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return '';
 
     return accessData.accessToken
   }
 
   autoLogout(jwt:string){
-    const expDate = this.jwtHelper.getTokenExpirationDate(jwt) as Date;//trovo la data di scadenza del token
-    const expMs = expDate.getTime() - new Date().getTime(); //sottraggo i ms della data/ora di oggi da quella nel jwt
+    const expDate = this.jwtHelper.getTokenExpirationDate(jwt) as Date;
+    const expMs = expDate.getTime() - new Date().getTime();
 
-    //avvio un timer, quando sarà passato il numero di ms necessari per la scadenza del token, avverrà il logout
+
     setTimeout(()=>{
       this.logout()
     },expMs)
@@ -89,15 +89,15 @@ export class AuthService {
 
   restoreUser(){
 
-    const userJson = localStorage.getItem('accessData')//recupero io dati di accesso
-    if(!userJson) return; //se l'utente non si è mai loggato blocca tutto
+    const userJson = localStorage.getItem('accessData')
+    if(!userJson) return;
 
-    const accessData:AccessData = JSON.parse(userJson)//se viene eseguita questa riga significa che i dati ci sono, quindi la converto da json ad oggetto per permetterne la manipolazione
-    if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return; //ora controllo se il token è scaduto, se lo è fermiamo la funzione
+    const accessData:AccessData = JSON.parse(userJson)
+    if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return;
 
-//se nessun return viene eseguito proseguo
-    this.authSubject.next(accessData.user)//invio i dati dell'utente al behaviorsubject
-    this.autoLogout(accessData.accessToken)//riavvio il timer per la scadenza della sessione
+
+    this.authSubject.next(accessData.user)
+    this.autoLogout(accessData.accessToken)
 
   }
 
