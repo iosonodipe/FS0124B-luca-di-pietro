@@ -8,4 +8,5 @@ public abstract class ElementoMultimediale {
     };
 
     public abstract void esegui();
+    //metodo necessario per avviare play() oppure show() nel Main
 }

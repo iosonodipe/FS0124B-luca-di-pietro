@@ -12,13 +12,14 @@ public class Audio extends ElementoMultimediale implements Riproducibile{
         this.durata = convertiPositivo(durata);
     }
 
-    public int convertiPositivo(int valore){
+    public int convertiPositivo(int valore){ //nel caso in cui venga inserito un valore negativo, lo riassegno in positivo
         if(valore < 0) valore = -valore;
         return valore;
     }
 
     @Override
-    public void play() {
+    public void play() { //eseguo due cicli: il primo crea la stringa relativa al volume sulla base della lunghezza del valore di volume inserito, il secondo stampa il titolo tante volte quanto il valore della durata inserita
+        System.out.println("Riproduco...");
         String livelloVolume = "";
         for (int i = 0; i < volume; i++){
             livelloVolume += "!";
@@ -34,7 +35,7 @@ public class Audio extends ElementoMultimediale implements Riproducibile{
     }
 
     @Override
-    public void abbassaVolume() {
+    public void abbassaVolume() { //se il volume è diverso dal valore del volume minimo, allora abbassa il volume, altrimenti non lo modifica
         if (volume != min_volume) {
             --volume;
             System.out.println("Nuovo volume: "+ volume);
