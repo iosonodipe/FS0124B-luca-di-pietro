@@ -29,21 +29,23 @@ public class Audio extends ElementoMultimediale implements Riproducibile{
     }
 
     @Override
+    public void esegui() {
+        play();
+    }
+
+    @Override
     public void abbassaVolume() {
-        if (volume != min_volume) volume = --volume;
-        else System.out.println("Volume minimo");
-        System.out.println("Nuovo volume: "+ volume);
+        if (volume != min_volume) {
+            --volume;
+            System.out.println("Nuovo volume: "+ volume);
+        } else System.out.println("Volume minimo");
     }
 
     @Override
     public void alzaVolume() {
-        if (volume != max_volume) volume = ++volume;
-        else System.out.println("Volume massimo");
-        System.out.println("Nuovo volume: "+ volume);
-    }
-
-    @Override
-    public void esegui() {
-        play();
+        if (volume != max_volume) {
+            ++volume;
+            System.out.println("Nuovo volume: "+ volume);
+        } else System.out.println("Volume massimo");
     }
 }
