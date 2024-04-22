@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Ex1 {
     private int[] array = new int[5];
 
+
     public Ex1(){
         for (int i = 0; i < array.length; i++){
             array[i] = new Random().nextInt(11);
@@ -35,7 +36,7 @@ public class Ex1 {
                 scanner.nextLine();
                 System.out.print("In che posizione? ");
                 posizione = scanner.nextInt();
-                if (posizione > 5) throw new LimiteArrayException("Posizione array non esistente");
+                if (posizione > 5) throw new LimiteArrayException();
                 scanner.nextLine();
                 array[posizione-1] = numero;
                 stampaArray();
