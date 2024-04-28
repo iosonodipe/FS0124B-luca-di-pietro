@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ArchivioSvc {
-    void addElement(Catalogo... element);
-    void deleteElementByISBN(Integer isbn);
+    void addElement();
+    void deleteElementByISBN();
     List<Catalogo> getByISBN(Integer isbn);
     List<Catalogo> getByPublishYear(Integer year);
     List<Catalogo> getByAuthor(String author);

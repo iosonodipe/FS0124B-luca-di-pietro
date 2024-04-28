@@ -4,36 +4,93 @@ import catalogo_bibliotecario.Catalogo;
 import catalogo_bibliotecario.Libro;
 import catalogo_bibliotecario.Periodicita;
 import catalogo_bibliotecario.Rivista;
+import exceptions.UnknownElementException;
+import exceptions.UnknownISBN;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class FileArchivioSvc implements ArchivioSvc{
-    private ArrayList<Catalogo> catalogue = new ArrayList<>();
-    private ArrayList<Catalogo> loadedCatalogue = new ArrayList<>();
+    private final ArrayList<Catalogo> catalogue = new ArrayList<>();
+    private final ArrayList<Catalogo> loadedCatalogue = new ArrayList<>();
+    private File f = new File("./catalogo.csv");
     Logger logger = LoggerFactory.getLogger(FileArchivioSvc.class);
-    private final File f = new File("./catalogo.csv");
 
-
-    @Override
-    public void addElement(Catalogo... element) {
-        catalogue.addAll(Arrays.asList(element));
+    public void addElementManual(Catalogo... element){
+        catalogue.addAll(List.of(element));
         save();
+    }
+    @Override
+    public void addElement() {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println();
+            System.out.print("Vuoi aggiungere un libro o una rivista? ");
+            String element = scanner.nextLine();
+            scanner.reset();
+            if (!element.equalsIgnoreCase("libro") && !element.equalsIgnoreCase("rivista")) throw new UnknownElementException();
+            System.out.println();
+            System.out.print("Titolo: ");
+            String title = scanner.nextLine();
+            scanner.reset();
+            System.out.print("Anno di pubblicazione: ");
+            int publishYear = scanner.nextInt();
+            scanner.reset();
+            System.out.print("Numero di pagine: ");
+            int pages = scanner.nextInt();
+            scanner.nextLine();
+            if (element.equalsIgnoreCase("libro")){
+                System.out.print("Autore: ");
+                String author = scanner.nextLine();
+                scanner.reset();
+                System.out.print("Genere: ");
+                String genre = scanner.nextLine();
+                scanner.reset();
+                catalogue.add(new Libro(title, publishYear, pages, author, genre));
+            } else if(element.equalsIgnoreCase("rivista")){
+                System.out.print("Periodicità: ");
+                Periodicita periodicity = Periodicita.valueOf(scanner.nextLine().toUpperCase());
+                scanner.reset();
+                catalogue.add(new Rivista(title, publishYear, pages, periodicity));
+            } else throw new UnknownElementException();
+            save();
+
+            System.out.println();
+            System.out.println("Catalogo aggiornato con successo!\n");
+            System.out.println(catalogue + "\n");
+
+        }
+        catch (InputMismatchException ex){
+            logger.error(String.valueOf(ex));
+        }
+        catch (UnknownElementException ex){
+            logger.error("Elemento non esistente, puoi aggiungere libro o rivista.\n");
+        }
+
     }
 
     @Override
-    public void deleteElementByISBN(Integer isbn) {
-        catalogue.removeIf(e -> e.getIsbn().equals(isbn));
-        save();
+    public void deleteElementByISBN() {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println();
+            System.out.print("Inserisci il codice ISBN dell'elemento da rimuovere: ");
+            int isbn = scanner.nextInt();
+            if (!catalogue.removeIf(e -> e.getIsbn().equals(isbn))) throw new UnknownISBN();
+            save();
+
+            System.out.println();
+            System.out.println("Catalogo aggiornato con successo!\n");
+            System.out.println(catalogue + "\n");
+        } catch (UnknownISBN ex){
+            logger.error("ISBN non trovato.");
+        } catch (InputMismatchException ex){
+            logger.error(String.valueOf(ex));
+        }
     }
 
     @Override
@@ -41,7 +98,7 @@ public class FileArchivioSvc implements ArchivioSvc{
         var elemento = catalogue.stream()
                 .filter(catalogo -> catalogo.getIsbn().equals(isbn))
                 .toList();
-        System.out.println(elemento);
+        System.out.println("\nElemento trovato: " + elemento);
         return elemento;
     }
 
@@ -50,6 +107,7 @@ public class FileArchivioSvc implements ArchivioSvc{
         var elemento = catalogue.stream()
                 .filter(catalogo -> catalogo.getPublish_year().equals(year))
                 .toList();
+        System.out.println("\nElementi trovati: ");
         for (Catalogo libro: elemento) System.out.print(libro);
         return elemento;
     }
@@ -57,8 +115,9 @@ public class FileArchivioSvc implements ArchivioSvc{
     @Override
     public List<Catalogo> getByAuthor(String author) {
         var elemento = catalogue.stream()
-                .filter(catalogo -> catalogo instanceof Libro && ((Libro) catalogo).getAuthor().equals(author))
+                .filter(catalogo -> catalogo instanceof Libro && ((Libro) catalogo).getAuthor().toLowerCase().equals(author))
                 .toList();
+        System.out.println("\nElementi trovati: ");
         for (Catalogo libro: elemento) System.out.print(libro);
         return elemento;
     }
@@ -69,7 +128,7 @@ public class FileArchivioSvc implements ArchivioSvc{
 
     public void save(){
         try{
-            FileUtils.delete(f);
+            PrintWriter writer = new PrintWriter(new FileWriter(f));
         } catch (IOException err) {
             IOException e = err;
             logger.error("Eccezione durante l'eliminazione",e);
@@ -113,6 +172,7 @@ public class FileArchivioSvc implements ArchivioSvc{
                 }
                 lines.add(line);
             }
+            System.out.println("\nCatalogo salvato: ");
             System.out.println(loadedCatalogue);
         } catch (IOException e) {
             e.printStackTrace();

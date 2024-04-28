@@ -6,7 +6,7 @@ public class Libro extends Catalogo {
 
     public Libro(String title, Integer publish_year, Integer pages, String author, String genre) {
         super(title, publish_year, pages);
-        this.author = author;
+        this.author = author.toLowerCase();
         this.genre = genre;
     }
 
