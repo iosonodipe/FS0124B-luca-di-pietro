@@ -98,7 +98,9 @@ public class FileArchivioSvc implements ArchivioSvc{
         var elemento = catalogue.stream()
                 .filter(catalogo -> catalogo.getIsbn().equals(isbn))
                 .toList();
-        System.out.println("\nElemento trovato: " + elemento);
+
+        if (!elemento.isEmpty()) System.out.println("\nElemento trovato: " + elemento);
+        else System.out.println("Nessun riscontro.");
         return elemento;
     }
 
@@ -107,8 +109,11 @@ public class FileArchivioSvc implements ArchivioSvc{
         var elemento = catalogue.stream()
                 .filter(catalogo -> catalogo.getPublish_year().equals(year))
                 .toList();
-        System.out.println("\nElementi trovati: ");
-        for (Catalogo libro: elemento) System.out.print(libro);
+
+        if (!elemento.isEmpty()){
+            System.out.println("\nElementi trovati: ");
+            for (Catalogo libro: elemento) System.out.print(libro);
+        } else System.out.println("Nessun riscontro.");
         return elemento;
     }
 
@@ -117,8 +122,11 @@ public class FileArchivioSvc implements ArchivioSvc{
         var elemento = catalogue.stream()
                 .filter(catalogo -> catalogo instanceof Libro && ((Libro) catalogo).getAuthor().toLowerCase().equals(author))
                 .toList();
-        System.out.println("\nElementi trovati: ");
-        for (Catalogo libro: elemento) System.out.print(libro);
+
+        if (!elemento.isEmpty()){
+            System.out.println("\nElementi trovati: ");
+            for (Catalogo libro: elemento) System.out.print(libro);
+        } else System.out.println("Nessun riscontro.");
         return elemento;
     }
 
@@ -128,7 +136,7 @@ public class FileArchivioSvc implements ArchivioSvc{
 
     public void save(){
         try{
-            PrintWriter writer = new PrintWriter(new FileWriter(f));
+            new PrintWriter(new FileWriter(f));
         } catch (IOException err) {
             IOException e = err;
             logger.error("Eccezione durante l'eliminazione",e);
