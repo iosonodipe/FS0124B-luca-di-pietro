@@ -16,6 +16,7 @@ public class Libro extends Catalogo {
 
     public void setAuthor(String author) {
         this.author = author;
+
     }
 
     public String getGenre() {
@@ -24,5 +25,14 @@ public class Libro extends Catalogo {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    @Override
+    public String toString() {
+        return
+                " <<Libro - " +
+                        super.toString() +
+                ", Autore = " + author +
+                ", Genere = " + genre + ">>\n";
     }
 }

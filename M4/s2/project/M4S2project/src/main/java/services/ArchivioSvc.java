@@ -2,12 +2,13 @@ package services;
 
 import catalogo_bibliotecario.Catalogo;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ArchivioSvc {
     void addElement(Catalogo... element);
     void deleteElementByISBN(Integer isbn);
-    Optional<Catalogo> getByISBN(Integer isbn);
-    Catalogo getByPublishYear(Integer year);
-    Catalogo getByAuthor(String author);
+    List<Catalogo> getByISBN(Integer isbn);
+    List<Catalogo> getByPublishYear(Integer year);
+    List<Catalogo> getByAuthor(String author);
 }

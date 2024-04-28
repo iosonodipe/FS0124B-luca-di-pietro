@@ -54,4 +54,12 @@ public abstract class Catalogo {
     public void setPages(Integer pages) {
         this.pages = pages;
     }
+
+    @Override
+    public String toString() {
+        return  "ISBN = " + isbn +
+                ", Titolo = " + title +
+                ", Anno di pubblicazione = " + publish_year +
+                ", Numero di pagine = " + pages;
+    }
 }
