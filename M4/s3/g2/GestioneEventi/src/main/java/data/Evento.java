@@ -11,11 +11,18 @@ public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    String titolo;
-    LocalDate dataEvento;
-    String descrizione;
-    TipoEvento tipoEvento;
-    int numeroMassimoPartecipanti;
+    private String titolo;
+    private LocalDate dataEvento;
+    private String descrizione;
+    private TipoEvento tipoEvento;
+    private int numeroMassimoPartecipanti;
+
+    @OneToMany(mappedBy = "evento")
+    private Partecipazione partecipazione;
+
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private Location location;
 
     public Evento(){
     }

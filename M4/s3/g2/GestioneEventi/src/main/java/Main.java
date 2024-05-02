@@ -1,4 +1,8 @@
 import data.TipoEvento;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import services.EventoDAO;
@@ -6,7 +10,8 @@ import services.EventoDAO;
 import java.time.LocalDate;
 
 public class Main {
-    static EventoDAO svc = new EventoDAO();
+    static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+    static EventoDAO svc = new EventoDAO(emf.createEntityManager());
     static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {

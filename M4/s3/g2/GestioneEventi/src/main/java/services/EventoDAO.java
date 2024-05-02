@@ -14,13 +14,14 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class EventoDAO {
-    // crea un factory per l'entity manager
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
-    // tramite il factory crea l'entity manager
-    private EntityManager em = emf.createEntityManager();
+    private EntityManager em;
     // apre una transazione
     private EntityTransaction trans = em.getTransaction();
     private final Logger logger = LoggerFactory.getLogger(EventoDAO.class);
+
+    public EventoDAO(EntityManager em){
+        this.em = em;
+    }
 
     public void save(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti){
         trans.begin();
