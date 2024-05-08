@@ -14,10 +14,10 @@
             <property name="jakarta.persistence.jdbc.driver"
                       value="org.postgresql.Driver" />
 
-            <property name="hibernate.default_schema" value="gestioneeventi" />
+            <property name="hibernate.default_schema" value="m4s3project" />
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.PostgreSQLDialect" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
             <property name="hibernate.show_sql" value="false" />
         </properties>
     </persistence-unit>

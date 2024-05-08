@@ -1,26 +1,25 @@
-package services;
+package app.services;
 
-import data.Evento;
-import data.TipoEvento;
+import app.data.Evento;
+import app.data.TipoEvento;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
-import jakarta.transaction.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class EventoDAO {
+    private static final Logger log = LoggerFactory.getLogger(EventoDAO.class);
     private EntityManager em;
     // apre una transazione
-    private EntityTransaction trans = em.getTransaction();
+    private EntityTransaction trans ;
     private final Logger logger = LoggerFactory.getLogger(EventoDAO.class);
 
     public EventoDAO(EntityManager em){
+        log.debug("Constructor");
         this.em = em;
+        trans = em.getTransaction();
     }
 
     public void save(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti){

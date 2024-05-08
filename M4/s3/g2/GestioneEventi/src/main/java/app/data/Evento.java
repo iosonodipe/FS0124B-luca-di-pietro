@@ -1,9 +1,10 @@
-package data;
+package app.data;
 
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "events")
@@ -18,7 +19,7 @@ public class Evento {
     private int numeroMassimoPartecipanti;
 
     @OneToMany(mappedBy = "evento")
-    private Partecipazione partecipazione;
+    private List<Partecipazione> partecipazione = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "location_id")
