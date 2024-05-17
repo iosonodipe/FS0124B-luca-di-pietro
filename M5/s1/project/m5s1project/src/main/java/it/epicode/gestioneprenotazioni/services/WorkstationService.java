@@ -18,11 +18,9 @@ public class WorkstationService {
     }
 
     public void searchWorkstationByTypeAndCity(WorkstationType type, String city){
-        var result = dao.findByTypeAndBuildingCity(WorkstationType.PRIVATE, city.toLowerCase());
+        var result = dao.findByTypeAndBuildingCity(type, city.toLowerCase());
         if (result.size() != 0){
-        for(Workstation element: result){
-            log.info(element.toString());
-        }
+        for(Workstation element: result) log.info(element.toString());
         } else log.warn("Nessun risultato trovato.");
     }
 }

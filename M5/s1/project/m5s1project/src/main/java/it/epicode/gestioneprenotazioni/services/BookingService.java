@@ -32,9 +32,11 @@ public class BookingService {
         }
         else if (ws.getCapacity() - bookingDAO.findByDateAndWorkstationId(date, ws.getId()).size() == 0) {
             log.warn("Non è possibile prenotare poichè la postazione ha raggiunto la massima capienza.");
+        } else if(bookingDAO.findByDateAndUserId(date, user.getId()) != null){
+            log.warn("Non puoi effettuare due prenotazioni nello stesso giorno.");
         } else {
             log.info("Prenotazione effettuata!");
-            bookingDAO.save(new Booking(date, user, ws));
+            save(new Booking(date, user, ws));
         }
     }
 }

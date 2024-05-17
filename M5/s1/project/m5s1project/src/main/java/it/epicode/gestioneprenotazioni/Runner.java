@@ -51,10 +51,10 @@ public class Runner implements CommandLineRunner{
             workstationService.save(workstation1);
             workstationService.save(workstation2);
 
-//            bookingService.createBooking(LocalDate.now(), userMario, 1L);
+//            bookingService.createBooking(LocalDate.now(), userLuigi, 1L);
             bookingService.createBooking(LocalDate.now(), userLuca, 2L);
             bookingService.createBooking(LocalDate.now(), userMario, 2L);
-            bookingService.createBooking(LocalDate.now(), userLuigi, 2L);
+            bookingService.createBooking(LocalDate.now(), userLuca, 1L);
 
             workstationService.searchWorkstationByTypeAndCity(WorkstationType.PRIVATE, "Milano");
 

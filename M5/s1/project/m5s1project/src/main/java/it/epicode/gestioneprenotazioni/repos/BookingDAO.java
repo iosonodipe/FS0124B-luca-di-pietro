@@ -11,4 +11,6 @@ import java.util.List;
 public interface BookingDAO extends JpaRepository<Booking, Long> {
 
     List<Booking> findByDateAndWorkstationId(LocalDate date, Long workstationId);
+    Booking findByDateAndUserId(LocalDate date, Long userId);
+
 }
