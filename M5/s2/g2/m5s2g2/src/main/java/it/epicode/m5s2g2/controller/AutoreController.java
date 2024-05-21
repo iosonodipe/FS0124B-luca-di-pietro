@@ -31,7 +31,12 @@ public class AutoreController {
 
     @PutMapping("/{idAutore}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void findAndUpdateById(@PathVariable Long idAutore, @RequestBody Autore body) throws Exception{
-        service.findAndUpdateById(idAutore, body);
+    public void update(@PathVariable Long idAutore, @RequestBody Autore body) throws Exception{
+        service.update(idAutore, body);
+    }
+
+    @DeleteMapping("/{idAutore}")
+    public void delete(@PathVariable Long idAutore){
+        service.delete(idAutore);
     }
 }

@@ -27,18 +27,21 @@ public class AutoreService {
         dao.save(autore);
     }
     //modifica lo specifico autore
-    public void findAndUpdateById(Long id, Autore body) throws Exception {
+    public void update(Long id, Autore body) throws Exception {
         Optional<Autore> autoreCercato = dao.findById(id);
         if (autoreCercato.isPresent()){
             Autore autore = autoreCercato.get();
-            autore.setNome(body.getNome());
-            autore.setCognome(body.getCognome());
-            autore.setEmail(body.getEmail());
-            autore.setDataDiNascita(body.getDataDiNascita());
-            autore.setAvatar(body.getAvatar());
+            if (body.getNome() != null) autore.setNome(body.getNome());
+            if (body.getCognome() != null) autore.setCognome(body.getCognome());
+            if (body.getEmail() != null) autore.setEmail(body.getEmail());
+            if (body.getDataDiNascita() != null) autore.setDataDiNascita(body.getDataDiNascita());
+            if (body.getAvatar() != null) autore.setAvatar(body.getAvatar());
             dao.save(autore);
         } else throw new Exception();
     }
 
     //cancella lo specifico autore
+    public void delete(Long id){
+        dao.deleteById(id);
+    }
 }
