@@ -20,5 +20,8 @@ public class Post {
     private String titolo;
     private String contenuto;
     private int tempoDiLettura;
+    @ManyToOne
+    @JoinColumn(name = "id_autore")
+    private Autore autore;
 
 }

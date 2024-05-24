@@ -22,12 +22,12 @@ public class AutoreService {
         return dao.findById(id);
     }
     //crea un nuovo autore
-    public void create(Autore autore){
+    public Autore create(Autore autore){
         autore.setAvatar("https://ui-avatars.com/api/?name="+ autore.getNome() + "+" + autore.getCognome());
-        dao.save(autore);
+        return dao.save(autore);
     }
     //modifica lo specifico autore
-    public void update(Long id, Autore body) throws Exception {
+    public Autore update(Long id, Autore body) throws Exception {
         Optional<Autore> autoreCercato = dao.findById(id);
         if (autoreCercato.isPresent()){
             Autore autore = autoreCercato.get();
@@ -37,11 +37,14 @@ public class AutoreService {
             if (body.getDataDiNascita() != null) autore.setDataDiNascita(body.getDataDiNascita());
             if (body.getAvatar() != null) autore.setAvatar(body.getAvatar());
             dao.save(autore);
+            return autore;
         } else throw new Exception();
     }
 
     //cancella lo specifico autore
-    public void delete(Long id){
+    public Optional<Autore> delete(Long id){
+        var autore = getById(id);
         dao.deleteById(id);
+        return autore;
     }
 }

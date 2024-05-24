@@ -17,8 +17,8 @@ public class AutoreController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED) // <-- 201
-    public void create(@RequestBody Autore body) throws Exception {
-        service.create(body);
+    public Autore create(@RequestBody Autore body) throws Exception {
+        return service.create(body);
     }
 
     @GetMapping
@@ -31,12 +31,12 @@ public class AutoreController {
 
     @PutMapping("/{idAutore}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void update(@PathVariable Long idAutore, @RequestBody Autore body) throws Exception{
-        service.update(idAutore, body);
+    public Autore update(@PathVariable Long idAutore, @RequestBody Autore body) throws Exception{
+        return service.update(idAutore, body);
     }
 
     @DeleteMapping("/{idAutore}")
-    public void delete(@PathVariable Long idAutore){
-        service.delete(idAutore);
+    public Optional<Autore> delete(@PathVariable Long idAutore){
+        return service.delete(idAutore);
     }
 }
