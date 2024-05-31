@@ -9,16 +9,17 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "eventi")
+@Table(name = "utenti")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Utente extends BaseEntity {
     private String nome;
     private String cognome;
-    @OneToMany(mappedBy = "utente", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "utente_id")
     private List<Evento> eventi;
-    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "ruolo_id")
     private Ruolo ruolo;
 
@@ -27,5 +28,9 @@ public class Utente extends BaseEntity {
         this.nome = nome;
         this.cognome = cognome;
         this.ruolo = ruolo;
+    }
+
+    public void aggiornaEventi(Evento evento){
+        this.eventi.add(evento);
     }
 }

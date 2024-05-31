@@ -24,3 +24,4 @@ public class Evento extends BaseEntity {
     private Luoghi luogo;
     private int numeroPosti;
 }
+
