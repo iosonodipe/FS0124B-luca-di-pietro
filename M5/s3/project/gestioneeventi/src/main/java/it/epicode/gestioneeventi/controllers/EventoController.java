@@ -23,16 +23,16 @@ public class EventoController {
         return ResponseEntity.ok(evento);
     }
 
-    @PatchMapping("/{id}")
-    public ResponseEntity<Evento> save(@PathVariable Long id, @RequestBody @Validated Evento body, BindingResult validator){
+    @PatchMapping("/{idUtente}/{idEvento}")
+    public ResponseEntity<Evento> update(@PathVariable Long idUtente, @PathVariable Long idEvento, @RequestBody @Validated Evento body, BindingResult validator){
         if (validator.hasErrors()) throw new RuntimeException(String.valueOf(validator.getAllErrors()));
-        var evento = eventoService.update(id, body);
+        var evento = eventoService.update(idUtente,idEvento, body);
         return ResponseEntity.ok(evento);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Evento> save(@PathVariable Long id, Evento body){
-        var evento = eventoService.delete(id);
+    @DeleteMapping("/{idUtente}/{idEvento}")
+    public ResponseEntity<Evento> delete(@PathVariable Long idUtente, @PathVariable Long idEvento){
+        var evento = eventoService.delete(idUtente, idEvento);
         return ResponseEntity.ok(evento);
     }
 }

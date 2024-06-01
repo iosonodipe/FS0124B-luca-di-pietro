@@ -24,7 +24,7 @@ public class UtenteController {
     }
 
     @PatchMapping("/prenota/{idUtente}/{idEvento}")
-    public ResponseEntity<Evento> save(@PathVariable Long idUtente, @PathVariable Long idEvento){
+    public ResponseEntity<Evento> update(@PathVariable Long idUtente, @PathVariable Long idEvento){
         var prenotazione = utenteService.prenota(idUtente, idEvento);
         return ResponseEntity.ok(prenotazione);
     }
