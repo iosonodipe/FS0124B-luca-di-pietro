@@ -1,7 +1,8 @@
 package it.epicode.gestioneeventi.controllers.exceptions.config;
 
+import it.epicode.gestioneeventi.controllers.exceptions.AlreadyBookedException;
 import it.epicode.gestioneeventi.controllers.exceptions.EventIsFullException;
-import it.epicode.gestioneeventi.controllers.exceptions.RuoloNotFoundException;
+import it.epicode.gestioneeventi.controllers.exceptions.NotFoundException;
 import it.epicode.gestioneeventi.controllers.exceptions.UserNotAuthorizedException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -39,9 +40,15 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(info, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(RuoloNotFoundException.class)
-    protected ResponseEntity<?> handleRuoloNotFoundException(RuoloNotFoundException ex){
+    @ExceptionHandler(NotFoundException.class)
+    protected ResponseEntity<?> handleRuoloNotFoundException(NotFoundException ex){
         var info = new ExModel(ex.getMessage(), ex.occurredAt, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(info, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(AlreadyBookedException.class)
+    protected ResponseEntity<?> handleAlreadyBookedException(AlreadyBookedException ex){
+        var info = new ExModel(ex.getMessage(), ex.occurredAt, HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(info, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

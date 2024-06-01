@@ -3,13 +3,13 @@ package it.epicode.gestioneeventi.controllers.exceptions;
 import java.io.Serial;
 import java.time.LocalDateTime;
 
-public class RuoloNotFoundException extends RuntimeException {
+public class NotFoundException extends RuntimeException {
     @Serial
     private static final long serialVersionUID = 1L;
 
     public final LocalDateTime occurredAt;
 
-    public RuoloNotFoundException(String message) {
+    public NotFoundException(String message) {
         super(message);
         this.occurredAt = LocalDateTime.now();
     }

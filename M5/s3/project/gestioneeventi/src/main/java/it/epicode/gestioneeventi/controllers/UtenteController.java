@@ -1,5 +1,6 @@
 package it.epicode.gestioneeventi.controllers;
 
+import it.epicode.gestioneeventi.entities.Evento;
 import it.epicode.gestioneeventi.entities.Utente;
 import it.epicode.gestioneeventi.entities.models.UtenteRequest;
 import it.epicode.gestioneeventi.services.UtenteService;
@@ -21,4 +22,12 @@ public class UtenteController {
         var utente = utenteService.save(body);
         return ResponseEntity.ok(utente);
     }
+
+    @PatchMapping("/prenota/{idUtente}/{idEvento}")
+    public ResponseEntity<Evento> save(@PathVariable Long idUtente, @PathVariable Long idEvento){
+        var prenotazione = utenteService.prenota(idUtente, idEvento);
+        return ResponseEntity.ok(prenotazione);
+    }
+
+
 }
